@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #dlgRepo .gameRow {
+                position: relative;
+                height: 80px;
+                padding: 5px;
+                clear: both;                     
+                border: 1px solid #ddd;
+            }
+            #dlgRepo .gameRow div.col {
+                float: left;
+            }
+            #dlgRepo .cover {
+                position: relative;
+                width: 50px;
+                margin-left: 10px;
+            }
+            #dlgRepo .cover .back {
+                position: absolute;
+                top: 9px;
+                left: 2px;
+                z-index: 0;
+                height: 60px;
+                width: 39px;
+                background: #000;
+                transform: skewX(160deg) rotate(-20deg);
+            }
+            #dlgRepo .cover .bone  {
+                position: absolute;
+                z-index: 2;
+                top: 18px;
+                left: 0px;
+                width: 5px;
+                height: 60px;
+                font-size: 1pt;
+                background: #000;                
+                transform: skewX(12deg) rotate(12deg);
+            }
+            #dlgRepo .cover .paper:first-child {
+                top: 12px;
+                left: -16px;                
+                box-shadow: none;
+            }
+            #dlgRepo .cover .paper {
+                position: absolute;
+                z-index: 1;
+                top: 68px;
+                left: -16px;
+                height: 2px;
+                width: 78px;
+                background: #ddd;
+                transform: skewX(70deg) rotate(-9.8deg);
+                box-shadow: -10px -1px 8px #000;
+            }
+            #dlgRepo .cover image {
+                position: relative;
+                box-shadow: inset 0px 0px 5px #f00;
+            }
+            #dlgRepo .cover img
+            {
+                position: absolute;
+                z-index: 3;
+                top: 10px;
+                left: 6px;
+                height: 64px;
+                vertical-align: middle;                
+                transform: skewX(160deg) rotate(-20deg);     
+                display: block;
+            }
+            #dlgRepo .info {
+                margin-left: 100px;                
+            }
+            #dlgRepo .author {
+                
+            }
+            #dlgRepo .title {
+                font-weight: bold;
+            }
+            #dlgRepo .status {
+                
+            }            
+        </style>
+    </head>
+    <body id="dlgRepo">
+        <div class="gameRow">
+            <div class="cover col">
+                <div class="paper"></div>
+                <div class="paper"></div>
+                <div class="back"></div>
+                <div class="bone"></div>
+                <div class="image"><img src="cover.jpg"></div>
+            </div>
+            <div class="info col">
+                <div class="title">Вой оборотня</div>
+                <div class="author">Джон Грин</div>
+            </div>
+            <div class="status col"></div>
+        </div>        
+        <div class="gameRow">
+            <div class="cover">
+                <div class="paper"></div>
+                <div class="paper"></div>
+                <div class="back"></div>
+                <div class="bone"></div>
+                <div class="image"><img src="cover.jpg"></div>
+            </div>
+            <div class="info col">
+                <div class="title">Верная шпага короля</div>
+            </div>
+            <div class="status"></div>
+        </div> 
+        <div class="gameRow">
+            <div class="cover">
+                <div class="paper"></div>
+                <div class="paper"></div>
+                <div class="back"></div>
+                <div class="bone"></div>
+                <div class="image"><img src="cover.jpg"></div>
+            </div>
+            <div class="title">Тайна капитана Шелтона</div>
+            <div class="status"></div>
+        </div> 
+    </body>
+</html>

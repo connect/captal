@@ -1,1 +1,64 @@
-{"result":"ok","data":{"total":2,"page":[{"game_id":"1","index_name":"test-rec-data1","fullname":"Тестовая игра 1","author_id":2,"author_name":"Jumangee","status":5,"rating_current":0,"create_date":1456929794,"last_update":1456929794,"cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg","cover_size":"64x64"},{"game_id":"2","index_name":"test-rec-data2","fullname":"Тестовая игра 2","author_id":2,"author_name":"Jumangee","status":1,"rating_current":0,"create_date":1456929794,"last_update":1456929794,"cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg","cover_size":"64x64"}]}}
+{
+    "result":"ok",
+    "data":{
+        "total":2,
+        "page":[
+            {
+                "game_id":"1",
+                "index_name":"test-rec-data1",
+                "fullname":"Тестовая игра 1",
+                "author_id":2,
+                "author_name":"Jumangee",
+                "status":1,
+                "rating_current":0,
+                "create_date":1456929794,
+                "last_update":1456929794,
+                "cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg","cover_size":"64x64"
+            },{
+                "game_id":"2",
+                "index_name":"test-rec-data2",
+                "fullname":"Тестовая игра 2",
+                "author_id":2,
+                "author_name":"Jumangee",
+                "status":5,
+                "rating_current":0,
+                "create_date":1456929794,
+                "last_update":1456929794,
+                "cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg","cover_size":"64x64"
+            },{
+                "game_id":"3",
+                "index_name":"test-rec-data3",
+                "fullname":"Howl of the Werewolf",
+                "author_id":3,
+                "author_name":"connect",
+                "status":5,
+                "rating_current":0,
+                "create_date":1456929794,
+                "last_update":1456929794,
+                "cover":"http:\/\/ecx.images-amazon.com\/images\/I\/51ZmnF91ceL._SX288_BO1,204,203,200_.jpg","cover_size":"64x64"
+            },{
+                "game_id":"4",
+                "index_name":"test-rec-data4",
+                "fullname":"Лабиринт Затаившейся Смерти",
+                "author_id":3,
+                "author_name":"connect",
+                "status":5,
+                "rating_current":0,
+                "create_date":1456929794,
+                "last_update":1456929794,
+                "cover":"http:\/\/quest-book.ru\/forum\/images\/upload\/2_eecefa842e28692f474dedd7b218935b.jpg","cover_size":"64x64"
+            },{
+                "game_id":"5",
+                "index_name":"test-rec-data5",
+                "fullname":"Три Дороги",
+                "author_id":3,
+                "author_name":"connect",
+                "status":5,
+                "rating_current":0,
+                "create_date":1456929794,
+                "last_update":1456929794,
+                "cover":"http:\/\/quest-book.ru\/forum\/books\/covers\/3roads.jpg","cover_size":"64x64"
+            }            
+        ]
+    }
+}

@@ -1,1 +1,17 @@
-{"result":"ok","data":{"game_id":"1","index_name":"test-rec-data1","fullname":"Тестовая игра 1","author_id":2,"author_name":"Jumangee","status":5,"rating_current":0,"create_date":1456929794,"last_update":1456929794,"cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg","cover_size":"64x64","data":"DATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATA"}}
+{
+    "result":"ok",
+    "data":{
+        "game_id":"1",
+        "index_name":"test-rec-data1",
+        "fullname":"Тестовая игра 1",
+        "author_id":2,
+        "author_name":"Jumangee",
+        "status":5,
+        "rating_current":0,
+        "create_date":1456929794,
+        "last_update":1456929794,
+        "cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg",
+        "cover_size":"64x64",
+        "data":"<book guid='' title='Безымянный'><folder id='folder_0000' type='autofolder'><article id='0'><text type='text_0000'></text></article></folder><handlers><handler name='jsiq_init_done'></handler><handler name='before_article_unload'></handler><handler name='on_article_unload'></handler><handler name='jsiq_error'></handler><handler name='on_create_article'></handler><handler name='on_article_preload'></handler><handler name='before_render_article'></handler><handler name='on_article_onload'></handler><handler name='after_article_loaded'></handler><handler name='on_render_article'></handler><handler name='on_text_render'></handler><handler name='on_render_images'></handler><handler name='preload_images'></handler><handler name='sound_tracks_load'></handler><handler name='sound_tracks_loadbackground'></handler><handler name='sound_play_tracks'></handler><handler name='sound_volume'></handler><handler name='update_charsheet'></handler></handlers></book>"
+    }
+}
