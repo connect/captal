@@ -334,12 +334,13 @@ body #toolbar {
     font-size: 8pt;
 }
 #toolbar .field input[type="text"] {
-    height: 13px;
+    height: 12px;
     width: 100px;
     font-size: 10pt;
     margin-top: 5px;
     margin-left: 2px;
     margin-bottom: 5px;
+    padding-bottom: 3px;
     vertical-align: top;
     border: 1px solid #898c95;
 }
