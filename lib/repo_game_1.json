@@ -1,17 +1,19 @@
 {
     "result":"ok",
     "data":{
-        "game_id":"1",
-        "index_name":"test-rec-data1",
-        "fullname":"Тестовая игра 1",
-        "author_id":2,
+        "IS_AUTHOR":"0",
+        "game_id":"3406",
+        "index_name":"game3406",
+        "fullname":"впаы вафы",
+        "author_id":"2",
         "author_name":"Jumangee",
-        "status":5,
-        "rating_current":0,
-        "create_date":1456929794,
-        "last_update":1456929794,
-        "cover":"http:\/\/quest-book.ru\/forum\/images\/avatars\/gallery\/13\/16.jpg",
-        "cover_size":"64x64",
-        "data":"<book guid='' title='Безымянный'><folder id='folder_0000' type='autofolder'><article id='0'><text type='text_0000'></text></article></folder><handlers><handler name='jsiq_init_done'></handler><handler name='before_article_unload'></handler><handler name='on_article_unload'></handler><handler name='jsiq_error'></handler><handler name='on_create_article'></handler><handler name='on_article_preload'></handler><handler name='before_render_article'></handler><handler name='on_article_onload'></handler><handler name='after_article_loaded'></handler><handler name='on_render_article'></handler><handler name='on_text_render'></handler><handler name='on_render_images'></handler><handler name='preload_images'></handler><handler name='sound_tracks_load'></handler><handler name='sound_tracks_loadbackground'></handler><handler name='sound_play_tracks'></handler><handler name='sound_volume'></handler><handler name='update_charsheet'></handler></handlers></book>"
+        "status":"1",
+        "last_update":"1457260172",
+        "rating_current":"0",
+        "create_date":"1457260171",
+        "cover":"http:\/\/quest-book.ru\/forum\/templates\/questbook2016\/images\/site-logo.png",
+        "cover_size":"x",
+        "data":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<book guid=\"yn7qeoosuilpv9w7t8c9i\" title=\"Безымянный\">                             \n                    <folder id=\"folder_0000\" type=\"autofolder\">\n                        <article id=\"0\">\n                            <text isglobal=\"false\" do=\"\" goto=\"\" ifnot=\"\" if=\"\" type=\"text_0000\" lang=\"undefined\"><![CDATA[Hello world!]]><\/text>\n                        <action isglobal=\"false\" goto=\"1\" type=\"action_5410\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Перейти на 1]]><\/action><script isglobal=\"false\" goto=\"\" type=\"onload\" if=\"\" ifnot=\"\" do=\"\" lang=\"undefined\"><![CDATA[vars.check = 0;]]><\/script><action isglobal=\"false\" goto=\"2\" type=\"action_6587\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Перейти на 2]]><\/action><\/article>\n                    <article id=\"1\"><text isglobal=\"false\" do=\"\" goto=\"\" ifnot=\"\" if=\"\" type=\"text_2519\" lang=\"undefined\"><![CDATA[Параграф 1!]]><\/text><action isglobal=\"false\" goto=\"0\" type=\"action_8468\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Вернуться на параграф 0]]><\/action><action isglobal=\"false\" goto=\"\" type=\"action_5801\" if=\"\" ifnot=\"\" do=\"script_8575\" lang=\"undefined\"><![CDATA[Уведомление]]><\/action><script isglobal=\"false\" goto=\"\" type=\"script_8575\" if=\"\" ifnot=\"\" do=\"\" lang=\"undefined\"><![CDATA[alert('javascript-уведомление!');]]><\/script><\/article><article id=\"2\"><text isglobal=\"false\" do=\"\" goto=\"\" ifnot=\"\" if=\"is_check\" type=\"text_5502\" lang=\"rus\"><![CDATA[Этот блок отобразится только при переходе из п3]]><\/text><action isglobal=\"false\" goto=\"3\" type=\"action_6197\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Идти на 3]]><\/action><action isglobal=\"false\" goto=\"0\" type=\"action_4701\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Вернуться на 0]]><\/action><text isglobal=\"false\" goto=\"\" type=\"text_6536\" if=\"\" ifnot=\"check\" do=\"\" lang=\"rus\"><![CDATA[Здесь есть скрытый текст,но чтобы его увидеть,сначала перейдите на 3 и вернитесь на 2]]><\/text><script isglobal=\"false\" goto=\"\" type=\"is_check\" if=\"\" ifnot=\"\" do=\"\" lang=\"undefined\"><![CDATA[return vars.check != 0;]]><\/script><\/article><article id=\"3\"><text isglobal=\"false\" do=\"\" goto=\"\" ifnot=\"\" if=\"\" type=\"text_4226\" lang=\"rus\"><![CDATA[Переменная check теперь инициализирована,можно вернуться]]><\/text><action isglobal=\"false\" goto=\"2\" type=\"action_7351\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Вернуться на 2]]><\/action><action isglobal=\"false\" goto=\"0\" type=\"action_3407\" if=\"\" ifnot=\"\" do=\"\" lang=\"rus\"><![CDATA[Сразу на 0]]><\/action><\/article><\/folder>                    \n                    <handlers>\n                        <handler name=\"jsiq_init_done\"><\/handler>\n                        <handler name=\"before_article_unload\"><\/handler>\n                        <handler name=\"on_article_unload\"><\/handler>\n                        <handler name=\"jsiq_error\"><\/handler>\n                        <handler name=\"on_create_article\"><\/handler>\n                        <handler name=\"on_article_preload\"><\/handler>\n                        <handler name=\"before_render_article\"><\/handler>\n                        <handler name=\"on_article_onload\"><\/handler>\n                        <handler name=\"after_article_loaded\"><\/handler>\n                        <handler name=\"on_render_article\"><\/handler>\n                        <handler name=\"on_text_render\"><\/handler>\n                        <handler name=\"on_render_images\"><\/handler>\n                        <handler name=\"preload_images\"><\/handler>\n                        <handler name=\"sound_tracks_load\"><\/handler>\n                        <handler name=\"sound_tracks_loadbackground\"><\/handler>\n                        <handler name=\"sound_play_tracks\"><\/handler>\n                        <handler name=\"sound_volume\"><\/handler>\n                        <handler name=\"update_charsheet\"><\/handler>\n                    <\/handlers>\n                <\/book>",
+        "shortdesc":""
     }
 }
