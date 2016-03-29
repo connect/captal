@@ -335,7 +335,7 @@ body #toolbar {
 }
 #toolbar .field input[type="text"] {
     height: 12px;
-    width: 100px;
+    width: 300px;
     font-size: 10pt;
     margin-top: 5px;
     margin-left: 2px;
