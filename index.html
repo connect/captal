@@ -109,7 +109,7 @@
                 <div class="field" title="IF TRUE срабатывает при выполнении условия"><img src="img/16/brick.png"><input id="logicTRUE" type="text"></div>
                 <div class="field" title="IF FALSE срабатывает при невыполнении условия"><img src="img/16/brick_delete.png"><input id="logicFALSE" type="text"></div>
                 <div class="field" title="DO вызвать скрипт"><img src="img/16/brick_error.png"><input id="logicDO" type="text"></div>
-                <div class="field" title="GOTO перейти к параграфу"><img src="img/16/brick_go.png"><input id="logicGO" type="text"></div>
+                <div class="field" title="GOTO перейти к параграфу"><img id="logicGOicon" src="img/16/brick_go.png"><input id="logicGO" type="text"></div>
                 <div class="field" title="GLOBAL для всего проекта"><img src="img/16/globe_place.png"><input id="logicGLOBAL" type="checkbox"></div>
             </div>
         </div>
@@ -170,9 +170,7 @@
                         <handler name="sound_volume"></handler>
                         <handler name="update_charsheet"></handler>
                     </handlers>
-                    <components>
-                        <component name="simple_inventory"></component>
-                    </components>
+                    <components></components>
                 </book>
             </xml>
         </div>
