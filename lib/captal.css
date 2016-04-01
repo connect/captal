@@ -30,6 +30,9 @@ body {
     -1px 1px 0 #888,
     1px 1px 0 #888;  
 }
+.pointer {
+    cursor: pointer;
+}
 #data-source { display: none; }
 #openDialog {
     position: absolute;
