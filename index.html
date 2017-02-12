@@ -59,7 +59,8 @@
             ><button id="btnSearchReplace" title="Поиск с Заменой"><img src="img/32/text_replace.png"></button-->
 
             <div class="splitter"></div>
-            <button id="btnShowInvisibles" title="Отобразать непечатные символы"><img src="img/32/pilcrow.png"></button
+            <button id="btnTranslate" title="Автоматический перевод"><img src="img/32/change_language.png"></button
+            ><button id="btnShowInvisibles" title="Отобразать непечатные символы"><img src="img/32/pilcrow.png"></button
             ><button id="btnUseWrapMode" title="Перенос текста"><img src="img/32/text_move.png"></button>
             
             <div class="splitter"></div>
@@ -358,9 +359,9 @@
 
                 </div>
                 <div class="pnlBlock action">
-                    <p><b>Признаки действий:</b></p>                    
-                    <div><input id="cActTags" type="checkbox" class="action"> Маркеры: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>
-                    <!--div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div-->
+                    <p><b>Признаки действий:</b></p>   
+                    <div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div>
+                    <div><input id="cActTags" type="checkbox" class="action"> Маркеры: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>                    
                     <div id="pnlActOptions">                        
                     </div>
                 </div>
@@ -390,6 +391,10 @@
                     <select id="sLang">
                         <option value="all" selected="selected">Все</option>
                     </select></p>
+                </div>
+                <div class="pnlBlock misc">
+                    <p><b>Дополнительно:</b></p>     
+                    <div><input id="cLineBr" type="checkbox" class="paragraph"> Учитывать перенос строки</div>
                 </div>
                 <div class="pnlBlock paragraph">
 
@@ -738,6 +743,17 @@
             между автокаталогами. Подробнее смотри раздел Как работают автокаталоги.</p>
         
     <h2 id="hlp-what-new">Что нового в этой версии</h2>
+        
+        <h3>0.20 alpha</h3>
+        <p>
+    + Возможность убирать из текста маркеры действий
+         
+        </p>
+        
+        <h3>0.19 alpha</h3>
+        <p>
+    > Некоторые изменения в работе с сервером
+        </p>
         
         <h3>0.18 alpha</h3>
         <p class="prewrap">
