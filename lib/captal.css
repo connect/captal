@@ -536,6 +536,12 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .blk_editors {
     /*padding-bottom: 5px;*/
     border-bottom: 4px solid #eee;
+    overflow: hidden;
+}
+.blk_wrapper{
+    position: relative;
+    overflow: hidden;
+    background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;
 }
 .blk_header {
     margin-left: 60px;
@@ -553,6 +559,23 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 /*div[captal-tag="text"]{
     white-space: pre-wrap;
 }*/
+.origtrans,
+.autotrans {
+    float: left;
+    top: 0px;
+    bottom: 0px;
+    width: 29%;
+    padding: 0 5px;
+    color: #666;
+    background: #fff;
+    clear: right;
+    font-size: 10pt;
+}
+.origtrans div,
+.autotrans div {
+    height: 200px;
+    overflow-y: auto;
+}
 
 #log {
     position: absolute;
