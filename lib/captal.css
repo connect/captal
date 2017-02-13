@@ -210,10 +210,21 @@ button:disabled, .disabled {
 }
 
 /****** Toc *******/
-#toc-header {
+#table-of-contents {
     position: absolute;
+    overflow: hidden;
     top: 74px;
     left: 10px;
+    bottom: 65px;
+    width: 202px;
+}
+#table-of-contents.maximized {
+    left: -500px;
+}    
+#toc-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 80px;
     height: 20px;
     padding: 2px 5px;
@@ -221,14 +232,15 @@ button:disabled, .disabled {
 }
 #toc {
     position: absolute;
-    top: 96px;
-    left: 10px;
-    bottom: 65px;
+    top: 22px;
+    left: 0px;
+    bottom: 0px;
     width: 200px !important;
     border: 1px solid #898c95;
     overflow: auto;
     background: #fff;
 }
+
 #nav .jstree-container-ul,
 #toc .jstree-container-ul {
     margin-left: -24px;
@@ -260,12 +272,23 @@ ul.jstree-contextmenu {
 
 /**** Navigator *****/
 #navigator {
-
+    position: absolute;    
+    overflow: hidden;
+    
+    top: 74px;
+    right: 10px;
+    width: 202px;
+    bottom: 65px;
+}
+#navigator.maximized {
+    left: -500px;
 }
 #navigator #nav-header {
     position: absolute;
-    top: 74px;
-    right: 10px;
+    /*top: 74px;
+    right: 10px;*/
+    top: 0px;
+    right: 0px;
     width: 80px;
     height: 20px;
     padding: 2px 5px;
@@ -273,9 +296,13 @@ ul.jstree-contextmenu {
 }
 #navigator #nav {
     position: absolute;
+    /*
     top: 96px;
     bottom: 65px;
-    right: 10px;
+    right: 10px;*/
+    top: 22px;
+    right: 0px;
+    bottom: 0px;
     width: 200px;
     border: 1px solid #898c95;
     overflow: auto;
@@ -288,9 +315,15 @@ ul.jstree-contextmenu {
     top: 73px;
     left: 217px;
     right: 217px;
+    /*left: 10px;
+    right: 10px; */
     bottom: 65px;
     /* overflow: hidden;  */
     border: 1px solid #898c95;
+}
+#desk.maximized {
+    left: 10px;
+    right: 10px;
 }
 
 /****** Toolbar ******/
