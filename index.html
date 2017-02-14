@@ -510,6 +510,64 @@
             <li>Создать действие</li>
         </ul>                
         
+        <!-- *********************** Project Options *********************** -->
+        
+        <div id="dlgOptions" class="hidden" title="Настройки Проекта">
+            <div>
+                
+                <div id="general" class="opt-group">
+                    
+                    <div class="header">Общие</div>
+                    
+                    Название проекта:<br> 
+                    <input id="projname" type="text" value="Безымянный">
+                    
+                </div>
+                
+                <div id="translate" class="opt-group">
+                    
+                    <div class="header">Перевод</div>                              
+                
+                    <div id="sourceLang" class="flag-group">
+                        Язык оригинала:
+                        <div>
+                            <img src="img/16/flag_eng.png" class="selected">
+                            <img src="img/16/flag_ger.png">
+                            <img src="img/16/flag_fra.png">
+                            <img src="img/16/flag_ita.png">
+                            <img src="img/16/flag_ukr.png">
+                            <img src="img/16/flag_rus.png">
+                        </div>
+                    </div>
+                    <div id="targetLang" class="flag-group">
+                        Язык проекта:
+                        <div>
+                            <img src="img/16/flag_rus.png" class="selected">
+                            <img src="img/16/flag_ukr.png">
+                            <img src="img/16/flag_ita.png">
+                            <img src="img/16/flag_fra.png">
+                            <img src="img/16/flag_ger.png">
+                            <img src="img/16/flag_eng.png">
+                        </div>
+                    </div>
+                    
+                    <div id="autotrans">
+                        <input type="checkbox" /> Автоматический перевод при открытии параграфа
+                    </div>
+                </div>
+                
+                <div id="format" class="opt-group">
+                    
+                    <div class="header">Форматирование</div>
+                
+                    <input type="checkbox"> Учитывать перенос строк и табуляцию
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
         <!-- ************************ About Window ************************* -->
         
         <div id="dlgAbout" class="hidden" title="О программе">
@@ -748,9 +806,10 @@
     <h2 id="hlp-what-new">Что нового в этой версии</h2>
         
         <h3>0.20 alpha</h3>
-        <p>
-    + Возможность убирать из текста маркеры действий
-         
+        <p class="prewrap">
+    + Максимизация центральной рабочей области
+    + Автоперевод от «Яндекс.Переводчик»
+    + При импорте убирать из текста маркеры действий
         </p>
         
         <h3>0.19 alpha</h3>
@@ -1191,12 +1250,13 @@
 
     <h2 id="hlp-libs">Использованные библиотеки</h2>
         <ul>
-            <li><a href="http://jumangee.net" target="_blank">JsIQ</a> &copy; Jumangee</li>
-        <li><a href="http://www.jquery.com" target="_blank">jQuery</a> &copy; jQuery Team & John Resig</li>
-        <li><a href="http://www.jqueryui.com" target="_blank">jQuery-ui</a> &copy; jQuery UI Team </li>
-        <li><a href="http://jstree.com" target="_blank">jsTree</a> &copy; Ivan Bozhanov</li>
-        <li><a href="https://github.com/jsFile/jsFile" target="_blank">jsFile</a> &copy; Denys Kniazevych</li>
-        <li><a href="https://ace.c9.io">ACE editor</a> &copy; Cloud9 IDE & Mozilla</li>
+          <li><a href="http://jumangee.net"           target="_blank">JsIQ</a> &copy; Jumangee</li>
+          <li><a href="http://www.jquery.com"             target="_blank">jQuery</a> &copy; jQuery Team & John Resig</li>
+          <li><a href="http://www.jqueryui.com"           target="_blank">jQuery-ui</a> &copy; jQuery UI Team </li>
+          <li><a href="http://jstree.com"                 target="_blank">jsTree</a> &copy; Ivan Bozhanov</li>
+          <li><a href="https://github.com/jsFile/jsFile"  target="_blank">jsFile</a> &copy; Denys Kniazevych</li>
+          <li><a href="https://ace.c9.io"                 target="_blank">ACE editor</a> &copy; Cloud9 IDE & Mozilla</li>
+          <li><a href="http://translate.yandex.ru"        target="_blank">Автоперевод</a> &copy; «Яндекс.Переводчик»</li>
         </ul>
         
     <h2 id="hlp-testers">Тестеры</h2>
@@ -1205,6 +1265,7 @@
             <li>Nori</li>
             <li>Vervang</li>
             <li>Jumangee</li>
+            <li>ЮркийСлон</li>
         </ul>    
             </div>
             
