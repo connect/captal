@@ -217,9 +217,13 @@ button:disabled, .disabled {
     left: 10px;
     bottom: 65px;
     width: 202px;
+    opacity: 1;
 }
 #table-of-contents.maximized {
-    left: -500px;
+    /*left: -500px;*/
+    opacity: 0;
+    z-index: 0;
+    width: 0px;
 }    
 #toc-header {
     position: absolute;
@@ -274,6 +278,8 @@ ul.jstree-contextmenu {
 #navigator {
     position: absolute;    
     overflow: hidden;
+    opacity: 1;    
+    z-index: 0;
     
     top: 74px;
     right: 10px;
@@ -281,7 +287,9 @@ ul.jstree-contextmenu {
     bottom: 65px;
 }
 #navigator.maximized {
-    left: -500px;
+    /* left: -500px; */
+    opacity: 0;
+    width: 0px;
 }
 #navigator #nav-header {
     position: absolute;
@@ -312,6 +320,7 @@ ul.jstree-contextmenu {
 /********************/
 #desk {
     position: absolute;
+    z-index: 1;
     top: 73px;
     left: 217px;
     right: 217px;
@@ -320,6 +329,7 @@ ul.jstree-contextmenu {
     bottom: 65px;
     /* overflow: hidden;  */
     border: 1px solid #898c95;
+    background: #f0f0f0;    
 }
 #desk.maximized {
     left: 10px;
