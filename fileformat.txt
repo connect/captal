@@ -1,0 +1,28 @@
+#
+# Project file format description
+#
+
+<?xml version="1.0" encoding="UTF-8"?>
+<book guid="" title="">
+    <folder id="" name="" type="">
+        <article id="1">
+            <script type="onload"><![CDATA[...]]></script>
+            <text id="" lang=""><![CDATA[...]]></text>
+            <text id="" lang=""><![CDATA[...]]></text>
+            <action id="" lang="" goto="25"><![CDATA[...]]></action>
+            <translation textid="" lang="" type="original"></translation>
+            <translation textid="" lang="" type="auto"></translation>
+            <lastsave>Mon, 16 Jun 2014 07:04:08 GMT</lastsave>
+        </article>
+    </folder>
+    <handlers></handlers>
+    <cssdata></cssdata>
+    <components></components>
+    <options></options>
+</book>
+
+
+FOLDER
+id
+name    for user folders
+type    autofolder, folder_yellow, ...
