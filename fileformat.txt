@@ -6,16 +6,19 @@
 <book guid="" title="">
     <folder id="" name="" type="">
         <article id="1">
-            <script type="onload"><![CDATA[...]]></script>
+            <script id="" type="onload"><![CDATA[...]]></script>
             <text id="" lang=""><![CDATA[...]]></text>
             <text id="" lang=""><![CDATA[...]]></text>
             <action id="" lang="" goto="25"><![CDATA[...]]></action>
             <translation textid="" lang="" type="original"></translation>
             <translation textid="" lang="" type="auto"></translation>
+            <blockly id=""></blockly>
             <lastsave>Mon, 16 Jun 2014 07:04:08 GMT</lastsave>
         </article>
     </folder>
-    <handlers></handlers>
+    <handlers>
+        <handler id="" name="">
+    </handlers>
     <cssdata></cssdata>
     <components></components>
     <options></options>
@@ -23,6 +26,43 @@
 
 
 FOLDER
+------
 id
 name    for user folders
 type    autofolder, folder_yellow, ...
+
+ARTICLE
+------
+id
+
+TEXT
+----
+id
+lang            rus/eng/undefined
+translated      true/false
+
+ACTION
+------
+id
+lang
+goto
+
+SCRIPT
+------
+id
+type
+
+TRANSLATION
+-----------
+textid
+lang
+type            auto/original
+
+BLOCKLY
+-------
+id
+
+HANDLER
+-------
+id
+name
