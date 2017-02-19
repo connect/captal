@@ -4,24 +4,30 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <book guid="" title="">
-    <folder id="" name="" type="">
+    <folder id="folder_0000" name="" type="autofolder">
         <article id="1">
-            <script id="" type="onload"><![CDATA[...]]></script>
-            <text id="" lang=""><![CDATA[...]]></text>
-            <text id="" lang=""><![CDATA[...]]></text>
-            <action id="" lang="" goto="25"><![CDATA[...]]></action>
-            <translation textid="" lang="" type="original"></translation>
-            <translation textid="" lang="" type="auto"></translation>
-            <blockly id=""></blockly>
-            <lastsave>Mon, 16 Jun 2014 07:04:08 GMT</lastsave>
+            <script type="onload"><![CDATA[...]]></script>
+            <script type="onload" readonly><![CDATA[...]]></script>
+            <text   lang=""><![CDATA[...]]></text>
+            <text   lang=""><![CDATA[...]]></text>
+            <action lang="" goto="25"><![CDATA[...]]></action>
+            <metadata>
+                <translate target="" lang="eng" type="original"></translate>
+                <translate target="" lang="rus" type="autot"></translate>
+                <blockly target=""></blockly>
+                <lastsave>Mon, 16 Jun 2014 07:04:08 GMT</lastsave>
+            </metadata>
         </article>
     </folder>
     <handlers>
-        <handler id="" name="">
+        <handler name="">
     </handlers>
     <cssdata></cssdata>
     <components></components>
-    <options></options>
+    <options>
+        <linebreak>1</linebreak>
+        <autotranslate>1</autotranslate>
+    </options>
 </book>
 
 
@@ -37,32 +43,28 @@ id
 
 TEXT
 ----
-id
 lang            rus/eng/undefined
 translated      true/false
 
 ACTION
 ------
-id
 lang
 goto
 
 SCRIPT
 ------
-id
 type
 
 TRANSLATION
 -----------
-textid
+target
 lang
 type            auto/original
 
 BLOCKLY
 -------
-id
+
 
 HANDLER
 -------
-id
 name

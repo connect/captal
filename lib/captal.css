@@ -347,9 +347,10 @@ body #toolbar {
     padding-left: 5px;    
     border-left: 1px solid #898c95;
     border-right: 1px solid #898c95;
-    overflow: hidden;
-    display: block;
+    overflow: hidden;    
     background: rgb(232,244,250);
+    height: 2px;
+    display: block;
 }
 #desk button {
     background: transparent;
@@ -373,29 +374,36 @@ body #toolbar {
     display: inline-block;
     background: url('../img/splitter.png') left bottom no-repeat !important;
 }
-#toolbar .field {
+.blk_header .field {
     display: inline-block;
     padding-right: 5px;
     font-weight: normal;
     font-size: 8pt;
 }
-#toolbar .field input[type="text"] {
+.blk_header .field input[type="text"] {
     height: 12px;
-    width: 300px;
+    width: 250px;
     font-size: 10pt;
     margin-top: 5px;
     margin-left: 2px;
     margin-bottom: 5px;
     padding-bottom: 3px;
     vertical-align: top;
-    border: 1px solid #898c95;
+    border: 0;
+    border-bottom: 1px solid #898c95;        
 }
-#toolbar .field input[type="checkbox"] {
+.blk_header .field input[type="checkbox"] {
     width: 14px;
     margin-top: 7px;
 }
-#toolbar img {
+.blk_header img {
     margin-top: 5px;
+}
+#blk_text .logicDO,
+#blk_text .logicGO,
+#blk_text .logicGLOBAL,
+#blk_action .logicGLOBAL{
+    display: none;
 }
 
 /******* ACE ******/
