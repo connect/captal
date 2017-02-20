@@ -381,7 +381,7 @@ body #toolbar {
 }
 #desk .ace_gutter {
     background: #e9e8e2;
-    width: 60px;
+    width: 50px;    
 }
 #desk .ace_gutter-cell {
     text-align: left;
@@ -508,57 +508,72 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     background: #e9e8e2;
 }
 .blk_group_header {
-    margin-left: 60px;
-    padding: 5px;
+    margin-left: 20px;    
     font-size: 14pt;
+    padding: 5px;
     color: #898c95;
     background: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .blk_group_header img {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
     vertical-align: middle;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 .blk_editors {
     /*padding-bottom: 5px;*/
     border-bottom: 4px solid #eee;
     overflow: hidden;
 }
-.blk_wrapper{
+.blk_wrapper {
     position: relative;
     overflow: hidden;
-    background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;
+    /*background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 0px dashed #898c95;
+    margin-left: 5px;
 }
 .blk_header {
-    position: relative;
-    margin-left: 60px;
-    padding: 5px;
+    position: relative;    
+    margin-left: 50px;
+    padding: 10px 0px 0px 5px;
     background: #fff;
     font-weight: bold;  
     overflow: hidden;
 }
-.blk_header .field div {
-}
 .blk_header .field {
-    display: inline-block;
-    padding: 0 5px;
+    display: inline-block;    
+    position: relative;
     font-weight: normal;
     font-size: 8pt;
-    border: 1px solid #f2f2f2;
-    border-radius: 5px;    
+    overflow: hidden;
+    margin-right: 5px;
+}
+.blk_header .field .hint {
+    position: absolute;
+    top: 0;
+    left: 28px;    
+    z-index: 1;
+    color: #999;
 }
 .blk_header .field input[type="text"] {
+    position: relative;
+    z-index: 2;
     height: 12px;
     width: 150px;
     font-size: 10pt;
-    margin-top: 5px;
-    margin-left: 2px;
     margin-bottom: 5px;
     padding-bottom: 3px;
     vertical-align: top;
     border: 0;
-    border-bottom: 1px solid #898c95;
+    border-bottom: 1px solid #898c95;   
+    background: transparent;
+}
+.blk_header .field input[type="text"]:focus {
+    background: #f00;
 }
 .blk_header .field.small input[type="text"]{
     width: 100px;   
@@ -566,9 +581,6 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .blk_header .field input[type="checkbox"] {
     width: 14px;
     margin-top: 7px;
-}
-.blk_header img {
-    margin-top: 5px;
 }
 #blk_text .logicDO,
 #blk_text .logicGO,
@@ -583,11 +595,9 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .blk_editor {
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom: 1px dashed #666;
+    border-bottom: 1px dashed #666;    
 }
-/*div[captal-tag="text"]{
-    white-space: pre-wrap;
-}*/
+
 .origtrans,
 .autotrans {
     float: left;
