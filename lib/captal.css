@@ -422,7 +422,11 @@ body #toolbar {
     background: #f1f1da !important; 
 }    
 #desk .ace_editor {
-    font-size: 12pt;
+    font-size: 10pt;
+    font-family: Verdana,Arial,sans-serif;
+}
+#desk .ace_editor[captal-translated="true"]{
+    margin-top: 17px;
 }
 .ace_scrollbar-v {
     overflow-y: auto;
@@ -554,7 +558,7 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .blk_wrapper {
     position: relative;
     overflow: hidden;
-    /*background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;*/
+    background: #f00 url('../img/blk_wrapper_bg.png') left top repeat-y;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-left: 5px;
@@ -614,19 +618,37 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     width: 14px;
     margin-top: 7px;
 }
+#blk_text .logicTYPE,
 #blk_text .logicDO,
 #blk_text .logicGO,
 #blk_text .logicGLOBAL,
+#blk_action .logicTYPE,
 #blk_action .logicGLOBAL,
+#blk_script .logicDO,
 #blk_script .logicTRUE,
 #blk_script .logicFALSE,
 #blk_script .logicGO {
     display: none;
 }
 
+#subheader {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 42%; /* ?+29+29=?+58  */
+    padding: 5px;
+    padding-left: 55px;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;
+    z-index: 0;
+}
+
 .blk_editor {
     padding-top: 5px;
-    padding-bottom: 1px;   
+    padding-bottom: 1px; 
+    z-index: 1;    
 }
 
 .origtrans,
@@ -638,6 +660,7 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     background: #fff;
     clear: right;
     font-size: 10pt;
+    z-index: 1;
 }
 .origtrans img,
 .autotrans img {
