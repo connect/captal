@@ -423,10 +423,11 @@ body #toolbar {
 }    
 #desk .ace_editor {
     font-size: 10pt;
-    font-family: Verdana,Arial,sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 #desk .ace_editor[captal-translated="true"]{
     margin-top: 17px;
+    padding-bottom: 24px;
 }
 .ace_scrollbar-v {
     overflow-y: auto;
@@ -558,7 +559,7 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .blk_wrapper {
     position: relative;
     overflow: hidden;
-    background: #f00 url('../img/blk_wrapper_bg.png') left top repeat-y;
+    background: transparent url('../img/blk_wrapper_bg.png') left top repeat-y;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-left: 5px;
@@ -624,10 +625,12 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 #blk_text .logicGLOBAL,
 #blk_action .logicTYPE,
 #blk_action .logicGLOBAL,
+#blk_action #subheader,
 #blk_script .logicDO,
 #blk_script .logicTRUE,
 #blk_script .logicFALSE,
-#blk_script .logicGO {
+#blk_script .logicGO,
+#blk_script #subheader {
     display: none;
 }
 
@@ -635,10 +638,10 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     position: absolute;
     top: 30px;
     left: 0px;
-    width: 42%; /* ?+29+29=?+58  */
+    width: 41%; /* ?+29+29=?+58  */
     padding: 5px;
     padding-left: 55px;
-    font-family: Verdana,Arial,sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
     font-size: 10pt;
     font-weight: bold;
     background: #fff url('../img/blk_wrapper_bg.png') left top repeat-y;
@@ -654,11 +657,13 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 .origtrans,
 .autotrans {
     display: table-cell;
+    position: relative;
     width: 29%;
     padding: 0 5px;
     color: #666;
     background: #fff;
     clear: right;
+    font-family: "Lucida Console", Monaco, monospace;
     font-size: 10pt;
     z-index: 1;
 }

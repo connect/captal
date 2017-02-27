@@ -126,10 +126,10 @@
                 <div id="blk_text"      class="blk_editors">
                     <div class="blk_group_header"><img src="img/32/page_world.png" /> Тексты</div>
                 </div>
-                <div id="blk_action"    class="blk_editors">
+                <div id="blk_action"    class="blk_editors hidden">
                     <div class="blk_group_header"><img src="img/32/page_lightning.png" /> Действия</div>
                 </div>
-                <div id="blk_script"    class="blk_editors">
+                <div id="blk_script"    class="blk_editors hidden">
                     <div class="blk_group_header"><img src="img/32/page_gear.png" /> Скрипты</div>
                 </div>
             </div>
@@ -180,6 +180,8 @@
                     <options>
                         <linebreak>1</linebreak>
                         <autotranslate>0</autotranslate>
+                        <sourcelang>eng</sourcelang>
+                        <targetlang>rus</targetlang>
                     </options>
                 </book>
             </xml>
@@ -533,26 +535,26 @@
                     
                     <div class="header">Перевод</div>                              
                 
-                    <div id="sourceLang" class="flag-group">
+                    <div class="flag-group">
                         Язык оригинала:
-                        <div>
-                            <img src="img/16/flag_eng.png" class="selected">
-                            <img src="img/16/flag_ger.png">
-                            <img src="img/16/flag_fra.png">
-                            <img src="img/16/flag_ita.png">
-                            <img src="img/16/flag_ukr.png">
-                            <img src="img/16/flag_rus.png">
+                        <div id="sourceLang">
+                            <img lang="eng" src="img/16/flag_eng.png" class="flag selected">
+                            <img lang="ger" src="img/16/flag_ger.png" class="flag">
+                            <img lang="fra" src="img/16/flag_fra.png" class="flag">
+                            <img lang="ita" src="img/16/flag_ita.png" class="flag">
+                            <img lang="urk" src="img/16/flag_ukr.png" class="flag">
+                            <img lang="rus" src="img/16/flag_rus.png" class="flag">
                         </div>
                     </div>
-                    <div id="targetLang" class="flag-group">
+                    <div class="flag-group">
                         Язык проекта:
-                        <div>
-                            <img src="img/16/flag_rus.png" class="selected">
-                            <img src="img/16/flag_ukr.png">
-                            <img src="img/16/flag_ita.png">
-                            <img src="img/16/flag_fra.png">
-                            <img src="img/16/flag_ger.png">
-                            <img src="img/16/flag_eng.png">
+                        <div id="targetLang">
+                            <img lang="rus" src="img/16/flag_rus.png" class="flag selected">
+                            <img lang="ukr" src="img/16/flag_ukr.png" class="flag">
+                            <img lang="ita" src="img/16/flag_ita.png" class="flag">
+                            <img lang="fra" src="img/16/flag_fra.png" class="flag">
+                            <img lang="ger" src="img/16/flag_ger.png" class="flag">
+                            <img lang="eng" src="img/16/flag_eng.png" class="flag">
                         </div>
                     </div>
                     
