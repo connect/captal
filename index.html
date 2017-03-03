@@ -12,7 +12,6 @@
         <script src="lib/jquery/jquery-menubar.js"></script>  
         <script src="lib/jquery-ui/jquery-ui.min.js"></script>        
         <script src="lib/keyboard.js"></script>
-        <script src="lib/jsiqapi.js"></script>
         <script src="lib/ace/ace.js" charset="utf-8"></script>
         <script src="lib/jstree/jstree.min.js"></script>
         <script src="lib/FileSaver.js"></script>                                
@@ -86,6 +85,10 @@
         <div id="log"></div>
         <div id="data-source"></div>
         <div id="doc" class="hidden"></div>
+        
+        <div id="alt">Alt</div>
+        <div id="ctrl">Ctrl</div>
+        <div id="shift">Shift</div>
 
         <!-- ############################ TEMPLATES ######################## -->
 
@@ -293,22 +296,6 @@
                 </td>
             </tr></table>
             <!-- конец оформления -->
-
-            <SCRIPT>
-                jsIQ.addEventHandler('jsiq_init_start', function(params, vars, process)	{
-                    var self = this;
-                    this.containers.text = $('#main_text');
-                    this.containers.actions = $('#actions');
-                    this.containers.title = $('#title');
-                    this.containers.charsheet = $('#charsheet');
-                    process.next();
-                });
-
-                jsIQ.addEventHandler('jsiq_init_done', function(params, vars, process)	{
-                    this.showArticle(0);
-                    process.next();
-                });
-            </script>
         </div>
         
         <!-- ********************* Import DOCX Dialog ********************** -->
@@ -485,6 +472,19 @@
                     border: 1px solid #0a6aa1;
                 }
             </style>           
+        </div>
+        
+        <!-- *********************** Search Dialog ************************* -->
+        
+        <div id="dlgSearch" class="hidden" title="Поиск">
+            <div>
+                Что искать: <input type="text">
+                <input type="checkbox"> Поиск в тексте
+                <input type="checkbox"> Поиск в действиях
+                <input type="checkbox"> Поиск в скриптах
+                
+                Заменить на: <input type="text">
+            </dvi>
         </div>
         
         <!-- ********************** Book Repository ************************ -->
