@@ -10,6 +10,7 @@
         <link   href="lib/captal.css" rel="stylesheet" type="text/css" />       
         <script src="lib/jquery/jquery-2.2.0.min.js"></script>
         <script src="lib/jquery/jquery-menubar.js"></script>  
+        <script src="lib/jquery/jquery-Contains.js"></script>
         <script src="lib/jquery-ui/jquery-ui.min.js"></script>        
         <script src="lib/keyboard.js"></script>
         <script src="lib/ace/ace.js" charset="utf-8"></script>
@@ -477,15 +478,25 @@
         <!-- *********************** Search Dialog ************************* -->
         
         <div id="dlgSearch" class="hidden" title="Поиск">
-            <div>
-                Что искать: <input type="text">
-                <input type="checkbox"> Поиск в тексте
-                <input type="checkbox"> Поиск в действиях
-                <input type="checkbox"> Поиск в скриптах
-                
-                Заменить на: <input type="text">
-            </dvi>
-            <div id="search-results"></div>
+            <div class="group">
+                <div id="iSearchValue"   class="field">Что искать: <input type="text"></div>
+                <div id="iSearchReplace" class="field">Заменить на: <input type="text" value="Не реализовано" disabled></div>
+            </div>
+            <div class="group">
+                <div id="cSearchTxt"><input type="checkbox" checked> В Текстах</div>
+                <div id="cSearchAct"><input type="checkbox"> В Действиях</div>
+                <div id="cSearchScr"><input type="checkbox"> В Скриптах</div>                
+            </div>
+            <div class="group">
+                <div id="cSearchReg"><input type="checkbox"> Учитывать регистр</div>
+                <!--
+                <div id=""><input type="checkbox"> </div>
+                <div id=""><input type="checkbox"> </div>
+                -->
+            </div>
+            <div id="search-results">
+                <div class="result-header"><div class=""></div><div class="">Пар.</div><div class="">Содержимое найденного блока</div></div>
+            </div>
         </div>
         
         <!-- ********************** Book Repository ************************ -->
