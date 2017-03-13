@@ -482,7 +482,7 @@
         <div id="dlgSearch" class="hidden" title="Поиск">
             <div class="group">
                 <div id="iSearchValue"   class="field">Что искать: <input type="text"></div>
-                <div id="iSearchReplace" class="field">Заменить на: <input type="text" value="Не реализовано" disabled></div>
+                <div id="iSearchReplace" class="field">Заменить на: <input type="text"></div>
             </div>
             <div class="group">
                 <div id="cSearchTxt"><input type="checkbox" checked> В Текстах</div>
@@ -491,13 +491,15 @@
             </div>
             <div class="group">
                 <div id="cSearchReg"><input type="checkbox"> Учитывать регистр</div>
-                <!--
-                <div id=""><input type="checkbox"> </div>
+                <!--<div id="cSerachCur"><input type="checkbox"> В текущем параграфе</div>
+                
                 <div id=""><input type="checkbox"> </div>
                 -->
             </div>
             <div id="search-results">
-                <div class="result-header ui-state-default ui-tabs-active ui-state-active"><div class=""></div><div class="">§</div><div class="">Содержимое найденного блока</div></div>
+                <div class="table">
+                    <div class="result-header ui-state-default ui-tabs-active ui-state-active"><div class=""></div><div class="">§</div><div class="">Содержимое найденного блока</div></div>                
+                </div>
             </div>
         </div>
         
