@@ -349,7 +349,7 @@ body #toolbar {
     border-right: 1px solid #898c95;
     overflow: hidden;    
     background: rgb(232,244,250);
-    height: 2px;
+    height: 30px;
     display: block;
 }
 #desk button {
