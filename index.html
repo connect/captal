@@ -101,10 +101,13 @@
             <div id="toolbar" class="ui-widget-header ui-corner-all">
                 <div class="toolbar-helper"></div>
                 <div class="toolbar-sub">
-                    <button id="0" title="" class="selected"><img src="img/32/page-new.png"></button>
-                    <button id="1" title=""><img src="img/32/page-draft.png"></button>
-                    <button id="2" title=""><img src="img/32/page-validate.png"></button>
-                    <button id="3" title=""><img src="img/32/page-ready.png"></button>
+                    <button id="1" title=""><img src="img/32/bullet_green.png"></button
+                    ><div class="splitter"></div>
+                    
+                    <button id="btnParStateNew"       class="state-new"   title="Пометить как новый" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
+                    ><button id="btnParStateDraft"    class="state-draft" title="Пометить как черновик" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
+                    ><button id="btnParStateValidate" class="state-validate" title="Пометить как кандидата" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
+                    ><button id="btnParStateReady"    class="state-ready" title="Пометить как готовый" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
                     <div class="splitter"></div>
                 </div>
                 <!--

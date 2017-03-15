@@ -256,7 +256,6 @@ button:disabled, .disabled {
     font-size: 8pt;
     height: 18px;
     line-height: 18px;
-    vertical-align: middle;
 }
 #toc .jstree-children .jstree-node .jstree-anchor .jstree-icon {
     /*background-image: url('img/icon-page.png');*/
@@ -272,6 +271,26 @@ button:disabled, .disabled {
 }
 ul.jstree-contextmenu {
     z-index: 10;
+}
+#toc .jstree-leaf a {
+    position: relative;
+}
+#toc .jstree-leaf .bullet {
+    position: absolute;
+    top: 9px;
+    left: -5px;
+    width: 8px;
+    height: 8px;
+    background: transparent url('../img/16/bullet_white.png') center center no-repeat;
+}
+#toc .jstree-leaf .bullet.deadend {
+    background: transparent url('../img/16/bullet_yellow.png') center center no-repeat;
+}
+#toc .jstree-leaf .bullet.orphan {
+    background: transparent url('../img/16/bullet_red.png') center center no-repeat;
+}
+#toc .jstree-leaf .bullet.end {
+    background: transparent url('../img/16/bullet_green.png') center center no-repeat;
 }
 
 /**** Navigator *****/
@@ -366,13 +385,13 @@ body #toolbar {
     right: 0;
     overflow: hidden;
     background: rgb(232,244,250);
-    width: 120px;
+    width: 140px;
+    padding-left: 12px;
+    padding-bottom: 2px;
     border-bottom-left-radius: 30px;
     border-left: 1px solid #898c95;
     border-right: 1px solid #898c95;
-    border-bottom: 1px solid #898c95;
-    padding-left: 20px;
-    padding-bottom: 2px;
+    border-bottom: 1px solid #898c95; 
     z-index: 2;
 }
 #toolbar .toolbar-sub button {
@@ -388,7 +407,7 @@ body #toolbar {
 #toolbar .toolbar-sub button.selected {
     
     background: #fff;
-    border: 1px solid #33f;
+    border: 1px solid #898c95;
 }
 #desk button {
     background: transparent;
