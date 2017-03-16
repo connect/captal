@@ -101,15 +101,14 @@
             <div id="toolbar" class="ui-widget-header ui-corner-all">
                 <div class="toolbar-helper"></div>
                 <div class="toolbar-sub">
-                    <button id="1" title=""><img src="img/32/bullet_green.png"></button
-                    ><div class="splitter"></div>
-                    
-                    <button id="btnParStateNew"       class="state-new"   title="Пометить как новый" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
-                    ><button id="btnParStateDraft"    class="state-draft" title="Пометить как черновик" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
-                    ><button id="btnParStateValidate" class="state-validate" title="Пометить как кандидата" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
-                    ><button id="btnParStateReady"    class="state-ready" title="Пометить как готовый" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
-                    <div class="splitter"></div>
-                </div>
+                    <button id="btnParRoleEnd" title="Параграф является концовкой" onclick="paragraph.isEnd(undefined,'toggle')"><img src="img/32/bullet_green.png"></button
+                    ><div class="splitter"></div
+                    ><button id="btnParStateNew"       class="state state-new"   title="Пометить как новый" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
+                    ><button id="btnParStateDraft"    class="state state-draft" title="Пометить как черновик" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
+                    ><button id="btnParStateValidate" class="state state-validate" title="Пометить как кандидата" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
+                    ><button id="btnParStateReady"    class="state state-ready" title="Пометить как готовый" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
+                    <div class="splitter"></div
+                    ></div>
                 <!--
                 <div class="splitter"></div>
                 <button id="btnRenameBlock" title="Переименовать блок"><img src="img/32/textfield_rename.png"></button><button id="btnRaiseBlock" title="Поднять блок"><img src="img/32/arrow_up.png"></button><button id="btnDownBlock" title="Опустить блок"><img src="img/32/arrow_down.png"></button>

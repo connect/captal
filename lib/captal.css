@@ -385,8 +385,8 @@ body #toolbar {
     right: 0;
     overflow: hidden;
     background: rgb(232,244,250);
-    width: 140px;
-    padding-left: 12px;
+    width: 135px;
+    padding-left: 15px;
     padding-bottom: 2px;
     border-bottom-left-radius: 30px;
     border-left: 1px solid #898c95;
