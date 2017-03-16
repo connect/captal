@@ -18,7 +18,9 @@
         <script src="lib/FileSaver.js"></script>                                
         <script src="lib/jsfile/jsfile.js"></script>
         <script src="lib/jsfile/jsfile-ooxml.min.js"></script>
-        <script src="lib/pdf.js"></script>           
+        <script src="lib/pdf.js"></script>       
+        <script src="lib/springy/springy.js"></script>
+        <script src="lib/springy/springyui.js"></script>
         <script src="lib/captal.js"></script>
     </head>
     <body>
@@ -261,7 +263,7 @@
                         <li id="nav-script" class="jstree-open" data-jstree='{"icon": "img/16/folder_gear.png"}'>Скрипты
                             <ul class="group"></ul>
                         </li>                        
-                        <li id="nav-links" class="jstree-open" data-jstree='{"icon": "img/16/folder_link.png"}'>Ссылки
+                        <li id="nav-links" class="jstree-open" data-jstree='{"icon": "img/16/folder_link.png"}'>Переходы извне
                             <ul class="group"></ul>
                         </li>
                         <li id="nav-handler" class="jstree-open" data-jstree='{"icon": "img/16/folder_error.png"}'>Обработчики
@@ -539,6 +541,7 @@
         
         <div id="dlgFlow" class="hidden" title="Схема параграфов">
             <div id="flow"></div>
+            <canvas id="my_canvas" width="1000" height="1200" />
         </div>
         
         <!-- ******************* Autolink Context Menu ********************* -->
