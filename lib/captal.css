@@ -487,9 +487,10 @@ body #toolbar {
     margin-top: 17px;
     padding-bottom: 24px;
 }
+/*
 #desk.maximized .ace_editor[captal-translated="true"] {
     padding-bottom: 10px;
-}
+} */
 .ace_scrollbar-v {
     overflow-y: auto;
 }
