@@ -404,7 +404,7 @@
                 </div>
                 <div class="pnlBlock encoding">
                     <p><b>Язык для экспорта:</b>
-                    <select id="sLang">
+                        <select id="sLang" onchange="project.preExport()">
                         <option value="all" selected="selected">Все</option>
                     </select></p>
                 </div>
@@ -412,6 +412,7 @@
                     <p><b>Дополнительно:</b></p>     
                     <div><input id="cLineBr" type="checkbox" class="paragraph"> Учитывать перенос строки</div>
                 </div>
+                <!--
                 <div class="pnlBlock paragraph">
 
                     <p><b>Признак параграфа:</b></p>
@@ -423,17 +424,18 @@
                 <div class="pnlBlock action">
                     <p><b>Признаки действий:</b></p>                    
                     <div><input id="cActTags" type="checkbox" class="action"> Маркеры: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>
-                    <!--div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div-->
+                    <div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div>
                     <div id="pnlActOptions">                        
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="pnlRight">
                 <p><b>Параграфов найдено:</b> <span id="parCount">0</span> <img id="lang" src="img/16/flag_undefined.png" title="undefined language"></p>                
                 <div id="pnlPreview" class="pnlBlock">
                 ...
-                </div>
-                <button id="btnImportTXTrefresh" onclick="project.importTXT()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
+                </div><!--
+                <button id="btnExportRefresh" onclick="project.preExport()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
+                      -->
             </div>
         </div>
         
