@@ -367,6 +367,46 @@
                     </select>
                     <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
                 </div>
+                <div class="pnlBlock marker">
+                    
+                    <p><b>Признаки параграфа и действия:</b></p>
+                    
+                    <div>
+                        <img src="img/16/icon-page.png" title="Признак параграфа">&nbsp; 
+                        <img src="img/16/lightning.png" title="Признак действия">
+                    </div>
+                    
+                    <div id="pnlMarkOptions">                        
+                    </div>
+
+                    <div><input id="cParTags" type="checkbox" class="paragraph"> Параграф: <input id="iParLeft" type="text" class="tagLeft"> xxx <input id="iParRight" type="text"></div>
+                    <div><input id="cActTags" type="checkbox" class="action"> Действие: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>
+                </div>
+            </div>
+            <div class="pnlRight">
+                <p><b>Параграфов найдено:</b> <span id="parCount">0</span> <img id="lang" src="img/16/flag_undefined.png" title="undefined language"></p>                
+                <div id="pnlPreview" class="pnlBlock">
+                ...
+                </div>
+                <button id="btnImportTXTrefresh" onclick="project.importTXT()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
+            </div>
+        </div>
+        
+        <!--
+        <div id="dlgImportTXTold" class="hidden" title="Импорт проекта из TXT">
+            
+            <div class="panel-icon">
+                <img src="img/64/txt-icon.png">
+            </div>
+            <div class="pnlLeft">
+                <div class="pnlBlock encoding">
+                    <p><b>Кодировка файла:</b></p>
+                    <select id="sEncoding">
+                        <option value="utf8">UTF-8</option>
+                        <option value="cp1251">Windows-1251</option>
+                    </select>
+                    <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
+                </div>
                 <div class="pnlBlock paragraph">
 
                     <p><b>Признак объявления параграфа:</b></p>
@@ -390,7 +430,7 @@
                 </div>
                 <button id="btnImportTXTrefresh" onclick="project.importTXT()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
             </div>
-        </div>
+        </div>-->
                 
         <!-- *********************** Export Window ************************* -->
         
