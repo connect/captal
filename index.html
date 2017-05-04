@@ -376,7 +376,10 @@
                         <img src="img/16/lightning.png" title="Признак действия">
                     </div>
                     
-                    <div id="pnlMarkOptions">                        
+                    <div id="pnlMarkOptions">
+                        <div>
+                            <input type="radio" name="parMarker" marker="A" checked> <span style="margin-left: 25px;">xxx</span>
+                        </div>
                     </div>
 
                     <div><input id="cParTags" type="checkbox" class="paragraph"> Параграф: <input id="iParLeft" type="text" class="tagLeft"> xxx <input id="iParRight" type="text"></div>
@@ -388,7 +391,7 @@
                 <div id="pnlPreview" class="pnlBlock">
                 ...
                 </div>
-                <button id="btnImportTXTrefresh" onclick="project.importTXT()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
+                <button id="btnImportTXTrefresh" onclick="project.loadTXT('preview')" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
             </div>
         </div>
         
