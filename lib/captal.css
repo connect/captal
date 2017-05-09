@@ -933,6 +933,10 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
 #dlgImportTXT .panel-icon {
     background: #999;
 }
+.panel-icon img {
+    width: 64px;
+    height: 64px;
+}
 #dlgImportTXT input[type="text"],
 #dlgExport input[type="text"] {
     width: 80px;
@@ -957,13 +961,29 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     height: 250px;
     overflow: auto;
     margin-bottom: 10px;
+    white-space: nowrap;
+}
+#dlgImportTXT #pnlMarkOptions div {
+    border-bottom: 1px solid #ccc;
+}
+#dlgImportTXT #pnlMarkOptions div:nth-child(even) {
+    
+    background: #eff;
 }
 #dlgImportTXT #pnlMarkOptions span {
     color: #ccc;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 #dlgImportTXT #pnlActOptions {
     height: 250px;
     overflow: auto;
+}
+#dlgImportTXT .marker .ui-state-active img {
+    padding: 2px;
+}
+#dlgImportTXT .marker .ui-state-active img {
+    vertical-align: middle;
 }
 #dlgImportTXT #btnImportTXTrefresh,
 #dlgExport #btnImportTXTrefresh {
@@ -982,6 +1002,7 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+,
     background: #eee;
     font-size: 8pt;
     text-align: justify;
+    white-space: pre-line; 
 }
 #dlgImportTXT #pnlPreview .entity,
 #dlgExport #pnlPreview .entity {

@@ -368,22 +368,24 @@
                     <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
                 </div>
                 <div class="pnlBlock marker">
-                    
-                    <p><b>Признаки параграфа и действия:</b></p>
-                    
-                    <div>
-                        <img src="img/16/icon-page.png" title="Признак параграфа">&nbsp; 
-                        <img src="img/16/lightning.png" title="Признак действия">
+                    <br>
+                    <div class="ui-state-active">
+                        <img src="img/16/icon-page.png" title="Признак параграфа"> 
+                        <img src="img/16/lightning.png" title="Признак действия"> &nbsp;
+                        <b>Признаки параграфа и действия:</b>
                     </div>
                     
                     <div id="pnlMarkOptions">
-                        <div>
-                            <input id="parMarkerDef" type="radio" name="parMarker" marker="A" checked> <span style="margin-left: 25px;">xxx</span>
-                        </div>
+                        <div class="hidden"><input id="parMarkerDef" type="radio" name="parMarker" marker="!Number"> <span style="margin-left: 25px;">xxx</span></div>
+                        <div class="hidden"><input id="cParTags" type="radio" name="parMarker" marker="!Strict"> <input id="iParLeft" type="text" class="tagLeft" style="margin-left: 25px;"><span>xxx</span><input id="iParRight" type="text"></div>
+                        <div class="hidden"><input id="cActTags" type="checkbox" marker="!Strict" style="margin-left: 30px;"> <input id="iActLeft" type="text" class="tagLeft"><span>xxx</span><input id="iActRight" type="text"></div>
                     </div>
 
-                    <div><input id="cParTags" type="checkbox" class="paragraph"> Параграф: <input id="iParLeft" type="text" class="tagLeft"> xxx <input id="iParRight" type="text"></div>
-                    <div><input id="cActTags" type="checkbox" class="action"> Действие: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>
+                    <p><b>Дополнительные настройки:</b></p>
+                    <div>
+                        <div><input id="cActString" type="checkbox" marker="!String"> Переход не всегда является числом</div>
+                        <div><input id="cActRemove" type="checkbox" marker="!Remove"> Убирать маркеры перехода</div>
+                    </div>
                 </div>
             </div>
             <div class="pnlRight">
