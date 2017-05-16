@@ -216,7 +216,7 @@ button:disabled, .disabled {
     top: 74px;
     left: 10px;
     bottom: 65px;
-    width: 202px;
+    width: 252px;
     opacity: 1;
 }
 #table-of-contents.maximized {
@@ -239,7 +239,7 @@ button:disabled, .disabled {
     top: 22px;
     left: 0px;
     bottom: 0px;
-    width: 200px !important;
+    width: 250px !important;
     border: 1px solid #898c95;
     overflow: auto;
     background: #fff;
@@ -341,7 +341,7 @@ ul.jstree-contextmenu {
     position: absolute;
     z-index: 1;
     top: 73px;
-    left: 217px;
+    left: 267px;
     right: 217px;
     /*left: 10px;
     right: 10px; */
