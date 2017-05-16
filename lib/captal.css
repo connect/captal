@@ -264,7 +264,7 @@ button:disabled, .disabled {
 #toc .jstree-node {
     min-height: 20px;
     line-height: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #toc .jstree-wholerow-ul {
     min-width: 1px;
