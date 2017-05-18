@@ -35,7 +35,7 @@
             <div class="splitter"></div>
             <button id="btnNewParagraph"    title="Новый Параграф"  disabled><img src="img/32/page_add.png"></button>
             <button id="btnNewLinkedPar"    title="Новый Связанный Параграф"  disabled><img src="img/32/page_link.png"></button>
-            <!--button id="btnInsertPar"       title="Встроить Новый Параграф"><img src="img/32/page_insert2.png"></button-->
+            <button id="btnInsertPar"       title="Встроить Новый Параграф" disabled><img src="img/32/page_insert2.png"></button>
             <!--button id="btnNewProject"      title="Новый Проект"            ><img src="img/32/report_add.png"></button-->
             <!--button id="btnOpenProject"     title="Открыть Проект"          ><img src="img/32/folder_blue.png"></button-->
             <!--button id="btnImport"          title="Импорт проекта"          ><img src="img/32/education.png"></button-->
@@ -272,7 +272,7 @@
                         <li id="nav-links" class="jstree-open" data-jstree='{"icon": "img/16/folder_link.png"}'>Переходы извне
                             <ul class="group"></ul>
                         </li>
-                        <li id="nav-tags" class="jstree-open" data-jstree='{"icon": "img/16/folder_star.png"}'>Теги
+                        <li id="nav-tags" class="jstree-open" data-jstree='{"icon": "img/16/folder_star.png"}'>Метки
                             <ul class="group"></ul>
                         </li>
                         <li id="nav-handler" class="jstree-open" data-jstree='{"icon": "img/16/folder_error.png"}'>Обработчики
@@ -323,6 +323,14 @@
                 </td>
             </tr></table>
             <!-- конец оформления -->
+        </div>
+        
+        <!-- ********************** Taglist Dialog ************************* -->
+        
+        <div id="dlgTaglist" class="hidden" title="Параграфы с данной меткой">
+            <h3>#<span id="tagName"></span></h3>
+            <br>
+            <div id="search-results"></div>
         </div>
         
         <!-- ********************* Import DOCX Dialog ********************** -->
