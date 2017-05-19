@@ -327,9 +327,11 @@
         
         <!-- ********************** Taglist Dialog ************************* -->
         
-        <div id="dlgTaglist" class="hidden" title="Параграфы с данной меткой">
-            <h3>#<span id="tagName"></span></h3>
-            <br>
+        <div id="dlgTaglist" class="hidden" title="Метки проекта">
+            <div>
+                ::<span class="selected-tag" onclick="project.listTags()"><img src="img/16/tag_hash.png"> Все метки</span><span id="tagName"></span>
+            </div>
+            <hr>
             <div id="search-results"></div>
         </div>
         
