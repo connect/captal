@@ -53,12 +53,13 @@
             ><button id="btnBlkCopy" title="Скопировать текущий блок" disabled><img src="img/32/bug_report.png"></button
             ><button id="btnPaste" title="Вставить" disabled><img src="img/32/paste_plain.png"></button>
             
+            <!--
             <div class="splitter"></div>
             <button id="btnPageUp" title="Поднять параграф" disabled><img src="img/32/move_up.png"></button
             ><button id="btnPageDn" title="Опустить параграф" disabled><img src="img/32/move_down.png"></button
             ><button id="btnOutdent" title="Отступ влево" disabled><img src="img/32/text_indent_remove.png"></button
             ><button id="btnIndent" title="Отступ вправо" disabled><img src="img/32/text_indent.png"></button
-            ><!--button id="btnInjectParagraph" title="Внедрить новый параграф" disabled><img src="img/32/page_link.png"></button-->
+            --><!--button id="btnInjectParagraph" title="Внедрить новый параграф" disabled><img src="img/32/page_link.png"></button-->
             <!--button id="btnFlow" title="Дерево параграфов"><img src="img/32/chart_organisation.png"></button-->
             
             <!--
@@ -357,7 +358,7 @@
         
         <div id="dlgImportPDF" class="hidden" title="Импорт проекта из PDF">
             
-            <div class="panel-icon">
+            <div class="panel-icon hidden">
                 <img src="img/64/pdf-icon.png">
             </div>            
 
@@ -373,9 +374,10 @@
         
         <div id="dlgImportTXT" class="hidden" title="Импорт проекта из TXT">
             
-            <div class="panel-icon">
+            <div class="panel-icon hidden">
                 <img src="img/64/txt-icon.png">
             </div>
+            
             <div class="pnlLeft">
                 <div class="pnlBlock encoding">
                     <p><b>Кодировка файла:</b></p>
@@ -395,8 +397,8 @@
                     
                     <div id="pnlMarkOptions">
                         <div class="hidden"><input id="parMarkerDef" type="radio" name="parMarker" marker="!Number"> <span style="margin-left: 25px;">xxx</span></div>
-                        <div class="hidden"><input id="cParTags" type="radio" name="parMarker" marker="!Strict"> <input id="iParLeft" type="text" class="tagLeft" style="margin-left: 25px;"><span>xxx</span><input id="iParRight" type="text"></div>
-                        <div class="hidden"><input id="cActTags" type="checkbox" marker="!Strict" style="margin-left: 30px;"> <input id="iActLeft" type="text" class="tagLeft"><span>xxx</span><input id="iActRight" type="text"></div>
+                        <div><input id="cParTags" type="radio" name="parMarker" marker="!Strict"> <input id="iParLeft" type="text" class="tagLeft" style="margin-left: 25px;"><span>xxx</span><input id="iParRight" type="text"></div>
+                        <div><input id="cActTags" type="checkbox" marker="!Strict" style="margin-left: 30px;"> <input id="iActLeft" type="text" class="tagLeft"><span>xxx</span><input id="iActRight" type="text"></div>
                     </div>
 
                     <p><b>Дополнительные настройки:</b></p>
@@ -414,46 +416,6 @@
                 <button id="btnImportTXTrefresh" onclick="project.loadTXT('preview')" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
             </div>
         </div>
-        
-        <!--
-        <div id="dlgImportTXTold" class="hidden" title="Импорт проекта из TXT">
-            
-            <div class="panel-icon">
-                <img src="img/64/txt-icon.png">
-            </div>
-            <div class="pnlLeft">
-                <div class="pnlBlock encoding">
-                    <p><b>Кодировка файла:</b></p>
-                    <select id="sEncoding">
-                        <option value="utf8">UTF-8</option>
-                        <option value="cp1251">Windows-1251</option>
-                    </select>
-                    <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
-                </div>
-                <div class="pnlBlock paragraph">
-
-                    <p><b>Признак объявления параграфа:</b></p>
-
-                    <div><input id="cParTags" type="checkbox" class="paragraph"> Маркеры: <input id="iParLeft" type="text" class="tagLeft"> xxx <input id="iParRight" type="text"></div>                    
-                    <div><input id="cParUnsort" type="checkbox" class="paragraph"> Неупорядочены</div>
-
-                </div>
-                <div class="pnlBlock action">
-                    <p><b>Признаки действий:</b></p>   
-                    <div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div>
-                    <div><input id="cActTags" type="checkbox" class="action"> Маркеры: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>                    
-                    <div id="pnlActOptions">                        
-                    </div>
-                </div>
-            </div>
-            <div class="pnlRight">
-                <p><b>Параграфов найдено:</b> <span id="parCount">0</span> <img id="lang" src="img/16/flag_undefined.png" title="undefined language"></p>                
-                <div id="pnlPreview" class="pnlBlock">
-                ...
-                </div>
-                <button id="btnImportTXTrefresh" onclick="project.importTXT()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
-            </div>
-        </div>-->
                 
         <!-- *********************** Export Window ************************* -->
         
@@ -861,7 +823,7 @@
         <p>Это платформа для запуска интерактивных книг-игр, разрабатываемая Jumangee. 
             Благодаря реализации в браузерной среде на языке JavaScript, она обладает 
             всеми современными возможностями HTML5 и богатой расширяемостью.
-            Каптал использует встроенную библиотеку Atril, что позволяет запускать 
+            Каптал использует встроенную библиотеку Atril. Это позволяет запускать 
             интерактивные книги-игры непосредственно из редактора, что удобно для 
             отладки будущей игры.</p>
         
@@ -884,7 +846,7 @@
             целиком состоящие из скриптовых блоков.</p>
         <p><h4 id="hlp-block-text">Текст</h4> – Повествовательный текст произвольного объема. Обратите 
         внимание, что при необходимости данный блок может содержать HTML теги разметки, 
-        а также иметь условие отображения.</p>
+        а также иметь условия отображения.</p>
         <p><h4 id="hlp-block-action">Действие</h4> – Описание перехода на другой параграф. Каждому действию 
         должен соответствовать один переход. Как и текстовый блок, действие может иметь 
         условие своего отображения. Условием же служит положительный (IF TRUE), либо 
@@ -911,13 +873,21 @@
         
     <h2 id="hlp-what-new">Что нового в этой версии</h2>
         
-        <h3>0.21 alpha</h3>
+        <h3>0.30 beta</h>
         <p class="prewrap">
-    + Появился поиск c заменой
-    + Четырехсупенчатая степень завершенности параграфа
-    + Проект сохраняет открытые параграфы
+    + Поиск c заменой по всем параграфам
+    + Четырехуровневая степень завершенности параграфа
+    + Проект запоминает открытые параграфы
     + Навигатор позволяет переходить по связям
     + Быстрое добавление связанного параграфа
+    + Внедрение параграфа между двумя связанными
+    + Копирование параграфов и блоков
+    + Ярлыки и Метки параграфов
+    + Открытие параграфов из окна отладки
+    > Улучшен импорт из TXT
+    > Улучшен экспорт проекта в DOC
+    > Переделано перемешивание параграфов
+    > Переделан интерфейс редактора
         </p>
     
         <h3>0.20 alpha</h3>
@@ -980,18 +950,16 @@
     <p>Позвольте поделиться с вами некоторыми соображениями о том, каким образом могла 
     бы быть построена работа пользователя с Капталом. На данный момент этот 
     инструмент нацелен на три категории лиц: Автор, Переводчик и Интерактиватор 
-    (Аниматор). Исходя из этих ролей, существует трисценария работы с Капталом.</p>
+    (Аниматор). Исходя из этих ролей, существует три сценария работы с Капталом.</p>
     
     <h2 id="hlp-author">Автор</h2>
     
         <p>Начинает с пустого проекта и постепенно наполяет его содержимым, параграф за 
-        параграфом. Результатом своей работы может иметь DOC\DOCX\PDF документ, 
-        воспользовавшись функцией экспорта. Для самоконтроля будут актуальны инструменты 
-        проверки орфографии. Постепенное заполнение потребует максимум удобства от 
+        параграфом. Результатом своей работы может иметь DOC документ, 
+        воспользовавшись функцией экспорта. Постепенное заполнение потребует максимум удобства от 
         механизмов создания новых параграфов, так как они будут часто востребованы.</p>
-        <p>В их числе: внедрение параграфа между двумя существующими, разделение 
-        выделенного текста в отдельный параграф\блок, создание связанного параграфа, 
-        клонирование параграфов и удаление с восстановлением связи. Стратегия написания 
+        <p>В их числе: внедрение параграфа между двумя существующими, создание связанного параграфа и 
+        клонирование параграфов. Стратегия написания 
         книги-игры через последовательное внедрение параграфов между началом и концом, 
         позволит иметь частично работоспособную игру на любой стадии ее написания. 
         Даже если целью автора не является создание собственной интерактивной 
