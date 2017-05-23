@@ -207,6 +207,7 @@
                     <options>
                         <linebreak>1</linebreak>
                         <autotranslate>0</autotranslate>
+                        <nocoding>0</nocoding>
                     </options>
                 </book>
             </xml>
@@ -266,13 +267,13 @@
                         </li>
                         <li id="nav-action" class="jstree-open" data-jstree='{"icon": "img/16/folder_lightning.png"}'>Действия
                             <ul class="group"></ul>
-                        </li>
-                        <li id="nav-script" class="jstree-open" data-jstree='{"icon": "img/16/folder_gear.png"}'>Скрипты
-                            <ul class="group"></ul>
-                        </li>                        
+                        </li>                                              
                         <li id="nav-links" class="jstree-open" data-jstree='{"icon": "img/16/folder_link.png"}'>Переходы извне
                             <ul class="group"></ul>
-                        </li>
+                        </li>                                                
+                        <li id="nav-script" class="jstree-open" data-jstree='{"icon": "img/16/folder_gear.png"}'>Скрипты
+                            <ul class="group"></ul>
+                        </li>  
                         <li id="nav-tags" class="jstree-open" data-jstree='{"icon": "img/16/folder_star.png"}'>Метки
                             <ul class="group"></ul>
                         </li>
@@ -379,6 +380,7 @@
             </div>
             
             <div class="pnlLeft">
+                
                 <div class="pnlBlock encoding">
                     <p><b>Кодировка файла:</b></p>
                     <select id="sEncoding">
@@ -387,6 +389,7 @@
                     </select>
                     <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
                 </div>
+                
                 <div class="pnlBlock marker">
                     <br>
                     <div class="ui-state-active">
@@ -588,8 +591,13 @@
                     
                     <div class="header">Общие</div>
                     
-                    Название проекта: <input id="projName" type="text" value="Безымянный">
-                    
+                    <div>
+                        Название проекта: <input id="projName" type="text" value="Безымянный">
+                    </div>
+                    <br>
+                    <div>
+                        <input id="cGUIHideCoding" type="checkbox"> Скрыть элементы программирования 
+                    </div>
                 </div>
                 
                 <div id="translate" class="opt-group">
