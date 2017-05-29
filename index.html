@@ -34,25 +34,25 @@
         <div id="menubar"></div>
         <div id="mainbar">
             <div class="splitter"></div>
-            <button id="btnNewParagraph"    title="Новый Параграф"  disabled><img src="img/32/page_add.png"></button>
-            <button id="btnNewLinkedPar"    title="Новый Связанный Параграф"  disabled><img src="img/32/page_link.png"></button>
-            <button id="btnInsertPar"       title="Встроить Новый Параграф" disabled><img src="img/32/page_insert2.png"></button>
-            <!--button id="btnNewProject"      title="Новый Проект"            ><img src="img/32/report_add.png"></button-->
+            <button id="btnNewParagraph"    title="{L_PARAGRAPH_NEW}"  disabled><img src="img/32/page_add.png"></button>
+            <button id="btnNewLinkedPar"    title="{L_PARAGRAPH_LINKED}"  disabled><img src="img/32/page_link.png"></button>
+            <button id="btnInsertPar"       title="{L_PARAGRAPH_INJECT}" disabled><img src="img/32/page_insert2.png"></button>
+            <!--button id="btnNewProject"      title="{L_PROJECT_NEW}"            ><img src="img/32/report_add.png"></button-->
             <!--button id="btnOpenProject"     title="Открыть Проект"          ><img src="img/32/folder_blue.png"></button-->
             <!--button id="btnImport"          title="Импорт проекта"          ><img src="img/32/education.png"></button-->
-            <button id="btnSaveAll"         title="Сохранить Все"   disabled><img src="img/32/report_save.png"></button>
+            <button id="btnSaveAll"         title="{L_SAVE_ALL}"   disabled><img src="img/32/report_save.png"></button>
             <!--button id="btnSaveDoc"         title="Сохранить в DOC" disabled><img src="img/32/report_word.png"></button-->
 
             <div class="splitter"></div>
-            <button id="btnAddText" title="Добавить текст" disabled><img src="img/32/script_globe.png"></button
-            ><button id="btnAddAction" title="Добавить действие" disabled><img src="img/32/script_lightning.png"></button
-            ><button id="btnAddScript" title="Добавить скрипт" disabled><img src="img/32/script_gear.png"></button
-            ><button id="btnAddHandler" title="Добавить обработчик" disabled><img src="img/32/script_error.png"></button>
+            <button id="btnAddText" title="{L_TEXT_ADD}" disabled><img src="img/32/script_globe.png"></button
+            ><button id="btnAddAction" title="{L_ACTION_ADD}" disabled><img src="img/32/script_lightning.png"></button
+            ><button id="btnAddScript" title="{L_SCRIPT_ADD}" disabled><img src="img/32/script_gear.png"></button
+            ><button id="btnAddHandler" title="{L_HANDLER_ADD}" disabled><img src="img/32/script_error.png"></button>
             
             <div class="splitter"></div>
-            <button id="btnParCopy" title="Скопировать текущий параграф" disabled><img src="img/32/page_copy.png"></button
-            ><button id="btnBlkCopy" title="Скопировать текущий блок" disabled><img src="img/32/bug_report.png"></button
-            ><button id="btnPaste" title="Вставить" disabled><img src="img/32/paste_plain.png"></button>
+            <button id="btnParCopy" title="{L_PARAGRAPH_COPY}" disabled><img src="img/32/page_copy.png"></button
+            ><button id="btnBlkCopy" title="{L_BLOCK_COPY}" disabled><img src="img/32/bug_report.png"></button
+            ><button id="btnPaste" title="{L_PASTE}" disabled><img src="img/32/paste_plain.png"></button>
             
             <!--
             <div class="splitter"></div>
@@ -70,28 +70,28 @@
             ><button id="btnDownBlock" title="Опустить блок"><img src="img/32/arrow_down.png"></button>-->
 
             <div class="splitter"></div>
-            <button id="btnTranslate" title="Машинный перевод" disabled><img src="img/32/change_language.png"></button
-            ><button id="btnSearch" title="Поиск" disabled><img src="img/32/find.png"></button
+            <button id="btnTranslate" title="{L_MACHINE_TRANSLATION}" disabled><img src="img/32/change_language.png"></button
+            ><button id="btnSearch" title="{L_SEARCH}" disabled><img src="img/32/find.png"></button
             ><!--button id="btnShowInvisibles" title="Отобразать непечатные символы" disabled><img src="img/32/pilcrow.png"></button
             --><!--button id="btnUseWrapMode" title="Перенос текста" disabled><img src="img/32/text_move.png"></button
-            --><button id="btnMaximize" title="Скрыть дерево параграфов и навигатора"><img src="img/32/arrow_expand.png"></button
-            ><button id="btnDebug" title="Протестировать проект" disabled><img src="img/32/debugging.png"></button
+            --><button id="btnMaximize" title="{L_EDITOR_MAXIMIZE}"><img src="img/32/arrow_expand.png"></button
+            ><button id="btnDebug" title="{L_PROJECT_DEBUG}" disabled><img src="img/32/debugging.png"></button
             >
             
             <div class="splitter"></div>
-            <button id="btnHelp" title="Справочное руководство"><img src="img/32/Button-White-Help-icon.png"></button>
+            <button id="btnHelp" title="{L_HELP}"><img src="img/32/Button-White-Help-icon.png"></button>
         </div>
 
         <div id="table-of-contents">
             <div id="toc-header" class="ui-state-default ui-tabs-active ui-state-active">
-                <a class="ui-tabs-anchor" href="#toc-header">Проект</a>
+                <a class="ui-tabs-anchor" href="#toc-header">{L_PROJECT}</a>
             </div>
             <div id="toc"></div>
         </div>
         
         <div id="navigator">
             <div id="nav-header" class="ui-state-default ui-tabs-active ui-state-active">
-                 <a class="ui-tabs-anchor" href="#nav-header">Навигатор</a>
+                 <a class="ui-tabs-anchor" href="#nav-header">{L_NAVIGATOR}</a>
             </div>
             <div id="nav"></div>
         </div>
@@ -113,12 +113,12 @@
             <div id="toolbar" class="ui-widget-header ui-corner-all">
                 <div class="toolbar-helper"></div>
                 <div class="toolbar-sub">
-                    <button id="btnParRoleEnd" title="Параграф является концовкой" onclick="paragraph.isEnd(undefined,'toggle')"><img src="img/32/bullet_green.png"></button
+                    <button id="btnParRoleEnd" title="{L_PARAGRAPH_IS_END}" onclick="paragraph.isEnd(undefined,'toggle')"><img src="img/32/bullet_green.png"></button
                     ><div class="splitter"></div
-                    ><button id="btnParStateNew"       class="state state-new"   title="Пометить как новый" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
-                    ><button id="btnParStateDraft"    class="state state-draft" title="Пометить как черновик" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
-                    ><button id="btnParStateValidate" class="state state-validate" title="Пометить как кандидата" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
-                    ><button id="btnParStateReady"    class="state state-ready" title="Пометить как готовый" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
+                    ><button id="btnParStateNew"       class="state state-new"   title="{L_PARAGRAPH_SET_NEW}" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
+                    ><button id="btnParStateDraft"    class="state state-draft" title="{L_PARAGRAPH_SET_DRAFT}" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
+                    ><button id="btnParStateValidate" class="state state-validate" title="{L_PARAGRAPH_SET_CANDIDATE}" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
+                    ><button id="btnParStateReady"    class="state state-ready" title="{L_PARAGRAPH_SET_READY}" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
                     <div class="splitter"></div
                     ></div>
                 <!--
@@ -291,7 +291,7 @@
         <!-- ************************** Loading **************************** -->
         
         <div id="dlgLoading" class="hidden">
-            Думаю <span></span>
+            {L_LOADING} <span></span>
             <div id="progress"></div>
         </div>
 
@@ -672,7 +672,7 @@
                 </p>                
                 <p>                        
                     <img src="img/16/globe_place.png" alt="Link" /> <a href="http://quest-book.ru/" target="_blank">Quest-book.ru Книги-игры и интерактивные рассказы</a><br />
-                    <img src="img/16/globe_place.png" alt="Link" /> <a href="http://quest-book.ru/forum/post/66180" target="_blank">Страница обсуждения проекта</a>
+                    <img src="img/16/globe_place.png" alt="Link" /> <a href="http://quest-book.ru/forum/topic/3115/0" target="_blank">Страница обсуждения проекта</a>
                 </p>
 
 
