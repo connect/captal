@@ -1,0 +1,1301 @@
+<div id="menubar"></div>
+<div id="mainbar">
+    <div class="splitter"></div>
+    <button id="btnNewParagraph"    title="{L_PARAGRAPH_NEW}"  disabled><img src="img/32/page_add.png"></button>
+    <button id="btnNewLinkedPar"    title="{L_PARAGRAPH_LINKED}"  disabled><img src="img/32/page_link.png"></button>
+    <button id="btnInsertPar"       title="{L_PARAGRAPH_INJECT}" disabled><img src="img/32/page_insert2.png"></button>
+    <!--button id="btnNewProject"      title="{L_PROJECT_NEW}"            ><img src="img/32/report_add.png"></button-->
+    <!--button id="btnOpenProject"     title="Открыть Проект"          ><img src="img/32/folder_blue.png"></button-->
+    <!--button id="btnImport"          title="Импорт проекта"          ><img src="img/32/education.png"></button-->
+    <button id="btnSaveAll"         title="{L_SAVE_ALL}"   disabled><img src="img/32/report_save.png"></button>
+    <!--button id="btnSaveDoc"         title="Сохранить в DOC" disabled><img src="img/32/report_word.png"></button-->
+
+    <div class="splitter"></div>
+    <button id="btnAddText" title="{L_TEXT_ADD}" disabled><img src="img/32/script_globe.png"></button
+    ><button id="btnAddAction" title="{L_ACTION_ADD}" disabled><img src="img/32/script_lightning.png"></button
+    ><button id="btnAddScript" title="{L_SCRIPT_ADD}" disabled><img src="img/32/script_gear.png"></button
+    ><button id="btnAddHandler" title="{L_HANDLER_ADD}" disabled><img src="img/32/script_error.png"></button>
+
+    <div class="splitter"></div>
+    <button id="btnParCopy" title="{L_PARAGRAPH_COPY}" disabled><img src="img/32/page_copy.png"></button
+    ><button id="btnBlkCopy" title="{L_BLOCK_COPY}" disabled><img src="img/32/bug_report.png"></button
+    ><button id="btnPaste" title="{L_PASTE}" disabled><img src="img/32/paste_plain.png"></button>
+
+    <!--
+    <div class="splitter"></div>
+    <button id="btnPageUp" title="Поднять параграф" disabled><img src="img/32/move_up.png"></button
+    ><button id="btnPageDn" title="Опустить параграф" disabled><img src="img/32/move_down.png"></button
+    ><button id="btnOutdent" title="Отступ влево" disabled><img src="img/32/text_indent_remove.png"></button
+    ><button id="btnIndent" title="Отступ вправо" disabled><img src="img/32/text_indent.png"></button
+    --><!--button id="btnInjectParagraph" title="Внедрить новый параграф" disabled><img src="img/32/page_link.png"></button-->
+    <!--button id="btnFlow" title="Дерево параграфов"><img src="img/32/chart_organisation.png"></button-->
+
+    <!--
+    <div class="splitter"></div>
+    <button id="btnRenameBlock" title="Переименовать блок"><img src="img/32/textfield_rename.png"></button
+    ><button id="btnRaiseBlock" title="Поднять блок"><img src="img/32/arrow_up.png"></button
+    ><button id="btnDownBlock" title="Опустить блок"><img src="img/32/arrow_down.png"></button>-->
+
+    <div class="splitter"></div>
+    <button id="btnTranslate" title="{L_MACHINE_TRANSLATION}" disabled><img src="img/32/change_language.png"></button
+    ><button id="btnSearch" title="{L_SEARCH}" disabled><img src="img/32/find.png"></button
+    ><!--button id="btnShowInvisibles" title="Отобразать непечатные символы" disabled><img src="img/32/pilcrow.png"></button
+    --><!--button id="btnUseWrapMode" title="Перенос текста" disabled><img src="img/32/text_move.png"></button
+    --><button id="btnMaximize" title="{L_EDITOR_MAXIMIZE}"><img src="img/32/arrow_expand.png"></button
+    ><button id="btnDebug" title="{L_PROJECT_DEBUG}" disabled><img src="img/32/debugging.png"></button
+    >
+
+    <div class="splitter"></div>
+    <button id="btnHelp" title="{L_HELP}"><img src="img/32/Button-White-Help-icon.png"></button>
+</div>
+
+<div id="table-of-contents">
+    <div id="toc-header" class="ui-state-default ui-tabs-active ui-state-active">
+        <a class="ui-tabs-anchor" href="#toc-header">{L_PROJECT}</a>
+    </div>
+    <div id="toc"></div>
+</div>
+
+<div id="navigator">
+    <div id="nav-header" class="ui-state-default ui-tabs-active ui-state-active">
+         <a class="ui-tabs-anchor" href="#nav-header">{L_NAVIGATOR}</a>
+    </div>
+    <div id="nav"></div>
+</div>
+<div id="desk"><ul id="tabs"></ul></div>
+<div id="log"></div>
+<div id="data-source"></div>
+<div id="doc" class="hidden"></div>
+
+<div id="alt">Alt</div>
+<div id="ctrl">Ctrl</div>
+<div id="shift">Shift</div>
+<div id="copy-buffer" class="hidden"></div>
+
+<!-- ############################ TEMPLATES ######################## -->
+
+<!-- ********************* Editor Toolbar Template ***************** -->
+
+<div id="toolbar-template" class="hidden">
+    <div id="toolbar" class="ui-widget-header ui-corner-all">
+        <div class="toolbar-helper"></div>
+        <div class="toolbar-sub">
+            <button id="btnParRoleEnd" title="{L_PARAGRAPH_IS_END}" onclick="paragraph.isEnd(undefined,'toggle')"><img src="img/32/bullet_green.png"></button
+            ><div class="splitter"></div
+            ><button id="btnParStateNew"       class="state state-new"   title="{L_PARAGRAPH_SET_NEW}" onclick="paragraph.state(undefined,'new')"><img src="img/16/page-new.png"></button
+            ><button id="btnParStateDraft"    class="state state-draft" title="{L_PARAGRAPH_SET_DRAFT}" onclick="paragraph.state(undefined,'draft')"><img src="img/16/page-draft.png"></button
+            ><button id="btnParStateValidate" class="state state-validate" title="{L_PARAGRAPH_SET_CANDIDATE}" onclick="paragraph.state(undefined,'validate')"><img src="img/16/page-validate.png"></button
+            ><button id="btnParStateReady"    class="state state-ready" title="{L_PARAGRAPH_SET_READY}" onclick="paragraph.state(undefined,'ready')"><img src="img/16/page-ready.png"></button>
+            <div class="splitter"></div
+            ></div>
+        <!--
+        <div class="splitter"></div>
+        <button id="btnRenameBlock" title="Переименовать блок"><img src="img/32/textfield_rename.png"></button><button id="btnRaiseBlock" title="Поднять блок"><img src="img/32/arrow_up.png"></button><button id="btnDownBlock" title="Опустить блок"><img src="img/32/arrow_down.png"></button>
+
+        <div class="splitter"></div>
+        <button id="btnOutdent" title="Отступ влево"><img src="img/32/text_indent_remove.png"></button
+        ><button id="btnIndent" title="Отступ вправо"><img src="img/32/text_indent.png"></button>
+
+        <div class="splitter"></div>
+        <button id="btnSearch" title="Поиск"><img src="img/32/find.png"></button
+        ><button id="btnSearchReplace" title="Поиск с Заменой"><img src="img/32/text_replace.png"></button>
+
+        <div class="splitter"></div>
+        <button id="btnShowInvisibles" title="Отобразать непечатные символы"><img src="img/32/pilcrow.png"></button
+        ><button id="btnUseWrapMode" title="Перенос текста"><img src="img/32/text_move.png"></button>
+    <br>
+        <!--div class="splitter"></div>
+        <div class="field" title="IF TRUE срабатывает при выполнении условия"><img id="logicTRUEicon" src="img/16/brick.png" class="pointer"><input id="logicTRUE" type="text"></div>
+        <div class="field" title="IF FALSE срабатывает при невыполнении условия"><img src="img/16/brick_delete.png"><input id="logicFALSE" type="text"></div>
+        <div class="field" title="DO вызвать скрипт"><img src="img/16/brick_error.png"><input id="logicDO" type="text"></div>
+        <div class="field" title="GOTO перейти к параграфу"><img id="logicGOicon" src="img/16/brick_go.png" class="pointer"><input id="logicGO" type="text"></div>
+        <div class="field" title="GLOBAL для всего проекта"><img src="img/16/globe_place.png"><input id="logicGLOBAL" type="checkbox"></div>
+        -->
+    </div>
+</div>
+
+<!-- ********************* Editor Tab Template ********************* -->
+
+<div id="new-tab-template" class="hidden">
+    <div class="blk_group" captal-tag="article">
+        <div id="blk_text"      class="blk_editors">
+            <div class="blk_group_header"><img src="img/32/page_world.png" /> {L_TEXTS}</div>
+        </div>
+        <div id="blk_action"    class="blk_editors hidden">
+            <div class="blk_group_header"><img src="img/32/page_lightning.png" /> {L_ACTIONS}</div>
+        </div>
+        <div id="blk_script"    class="blk_editors hidden">
+            <div class="blk_group_header"><img src="img/32/page_gear.png" /> {L_SCRIPTS}</div>
+        </div>
+    </div>
+</div>
+
+<!-- ***************** Editor HandlerTab Template ****************** -->
+
+<div id="new-handlertab-template" class="hidden">
+    <div class="blk_group" captal-tag="handler">
+        <div id="blk_handler"      class="blk_editors">
+            <div class="blk_group_header"><img src="img/32/handler.png" /> {L_HANDLERS}</div>
+        </div>                
+    </div>
+</div>
+
+<!-- ********************** Project Template *********************** -->
+
+<div id="new-project-template" class="hidden">
+    <xml>
+        <book guid="" title="{L_UNTITLED}">                             
+            <folder id="folder_0000" type="autofolder">
+                <article id="0">
+                    <text></text>
+                    <metadata></metadata>
+                </article>
+            </folder>                    
+            <handlers>
+                <handler name="jsiq_init_done"></handler>
+                <handler name="before_article_unload"></handler>
+                <handler name="on_article_unload"></handler>
+                <handler name="jsiq_error"></handler>
+                <handler name="on_create_article"></handler>
+                <handler name="on_article_preload"></handler>
+                <handler name="before_render_article"></handler>
+                <handler name="on_article_onload"></handler>
+                <handler name="after_article_loaded"></handler>
+                <handler name="on_render_article"></handler>
+                <handler name="on_text_render"></handler>
+                <handler name="on_render_images"></handler>
+                <handler name="preload_images"></handler>
+                <handler name="sound_tracks_load"></handler>
+                <handler name="sound_tracks_loadbackground"></handler>
+                <handler name="sound_play_tracks"></handler>
+                <handler name="sound_volume"></handler>
+                <handler name="update_charsheet"></handler>
+            </handlers>
+            <components></components>
+            <options>
+                <linebreak>1</linebreak>
+                <autotranslate>0</autotranslate>
+                <nocoding>0</nocoding>
+            </options>
+        </book>
+    </xml>
+</div>
+
+<!-- ****************** Table of Contents Template ***************** -->
+
+<div id="new-toc-template" class="hidden">
+    <ul>
+        <li id="toc-book" class="jstree-open" data-jstree='{"icon": "img/16/time.png", "type": "root"}'>{L_PROJECT_LOADING}...
+            <ul>
+                <li id="toc-paragraphs" class="jstree-open" data-jstree='{"type": "paragraphs"}'>{L_PARAGRAPHS}
+                    <ul class="group"></ul>
+                </li>
+                <li id="toc-handlers" data-jstree='{ "type": "handlers"}'>{L_HANDLERS}
+                    <ul class="group">
+
+                        <li id="jsiq_init_done" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>jsiq_init_done</li>
+                        <li id="before_article_unload" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>before_article_unload</li>
+                        <li id="on_article_unload" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_article_unload</li>
+                        <li id="jsiq_error" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>jsiq_error</li>
+                        <li id="on_create_article" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_create_article</li>
+                        <li id="on_article_preload" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_article_preload</li>
+                        <li id="before_render_article" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>before_render_article</li>
+                        <li id="on_article_onload" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_article_onload</li>
+                        <li id="after_article_loaded" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>after_article_loaded</li>
+                        <li id="on_render_article" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_render_article</li>
+                        <li id="on_text_render" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_text_render</li>
+                        <li id="on_render_images" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>on_render_images</li>
+                        <li id="preload_images" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>preload_images</li>
+                        <li id="sound_tracks_load" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>sound_tracks_load</li>
+                        <li id="sound_tracks_loadbackground" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>sound_tracks_loadbackground</li>
+                        <li id="sound_play_tracks" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>sound_play_tracks</li>
+                        <li id="sound_volume" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>sound_volume</li>
+                        <li id="update_charsheet" data-jstree='{"icon": "img/16/icon-handler.png","type": "handler"}'>update_charsheet</li>
+
+                    </ul>
+                </li>
+                <li id="toc-components" data-jstree='{ "type": "components" }'>{L_COMPONENTS}
+                    <ul>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- ***************** Paragraph Navigator Template **************** -->
+
+<div id="new-nav-template" class="hidden">
+    <ul>
+        <li id="nav-root" class="jstree-open" data-jstree='{"icon": "img/16/icon-page.png"}'>{L_PARAGRAPH_LOADING}...
+            <ul>
+                <li id="nav-text" class="jstree-open" data-jstree='{"icon": "img/16/folder_globe.png"}'>{L_TEXTS}
+                    <ul class="group"></ul>
+                </li>
+                <li id="nav-action" class="jstree-open" data-jstree='{"icon": "img/16/folder_lightning.png"}'>{L_ACTIONS}
+                    <ul class="group"></ul>
+                </li>                                              
+                <li id="nav-links" class="jstree-open" data-jstree='{"icon": "img/16/folder_link.png"}'>{L_LINKS_EXTERNAL}
+                    <ul class="group"></ul>
+                </li>                                                
+                <li id="nav-script" class="jstree-open" data-jstree='{"icon": "img/16/folder_gear.png"}'>{L_SCRIPTS}
+                    <ul class="group"></ul>
+                </li>  
+                <li id="nav-tags" class="jstree-open" data-jstree='{"icon": "img/16/folder_star.png"}'>{L_TAGS}
+                    <ul class="group"></ul>
+                </li>
+                <li id="nav-handler" class="jstree-open" data-jstree='{"icon": "img/16/folder_error.png"}'>{L_HANDLERS}
+                    <ul class="group"></ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- ########################## DIALOGS ############################ -->
+
+<!-- ************************** Loading **************************** -->
+
+<div id="dlgLoading" class="hidden">
+    {L_LOADING}.. <span></span>
+    <div id="progress"></div>
+</div>
+
+<!-- ******************** Open Project Dialog ********************** -->
+
+<input id="openProject" name="openProject" type="file" accept=".pdf, .docx, .xml, .txt" />
+
+<!-- ************************ Debug Project ************************ -->
+
+<div id="dlgDebug" class="hidden" title="Atril">
+        <!-- начало оформления - это то, что будет отображать текст книги -->
+    <table class="atril-game" border="0" width="100%" style="border:0; width: 100%; height: 100%;" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="95%"  height="100%" valign="middle" style="padding: 2%">
+            <div id="main">
+                <div id="title">
+                    <!-- сюда будет вставлен номер параграфа, его скрываем -->
+                </div>
+                <div id="main_text">
+                    <!-- сюда будет вставляться текст параграфа -->
+                </div>
+                <br>
+                <div id="actions">
+                    <!-- здесь будут перечислены действия -->
+                </div>
+            </div>
+        </td>
+        <td valign="top" align="right">
+            <div id="charsheet" style="">
+                <!-- лист персонажа -->
+            </div>
+        </td>
+    </tr></table>
+    <!-- конец оформления -->
+</div>
+
+<!-- ********************** Taglist Dialog ************************* -->
+
+<div id="dlgTaglist" class="hidden" title="{L_PROJECT_TAGS}">
+    <div>
+        ::<span class="selected-tag" onclick="project.listTags()"><img src="img/16/tag_hash.png"> {L_TAGS_ALL}</span><span id="tagName"></span>
+    </div>
+    <hr>
+    <div id="search-results"></div>
+</div>
+
+<!-- ********************** Import TXT Dialog ********************** -->
+
+<div id="dlgImportTXT" class="hidden" title="{L_PROJECT_IMPORT}">
+
+    <div class="panel-icon hidden">
+        <img src="img/64/txt-icon.png">
+    </div>
+
+    <div class="pnlLeft">
+
+        <div class="pnlBlock encoding">
+            <p><b>{L_FILE_ENCODING}:</b></p>
+            <select id="sEncoding">
+                <option value="utf8">UTF-8</option>
+                <option value="cp1251">Windows-1251</option>
+            </select>
+            <span id="decodeResult"><img height="16" src="img/16/emotion_question.png"> OK</span>
+        </div>
+
+        <div class="pnlBlock marker">
+            <br>
+            <div class="ui-state-active">
+                <img src="img/16/icon-page.png" title="{L_PARAGRAPH_MARK}"> 
+                <img src="img/16/lightning.png" title="{L_ACTION_MARK}"> &nbsp;
+                <b>{L_PARAGRAPH_ACTION_MARK}:</b>
+            </div>
+
+            <div id="pnlMarkOptions">
+                <div class="hidden"><input id="parMarkerDef" type="radio" name="parMarker" marker="!Number"> <span style="margin-left: 25px;">xxx</span></div>
+                <div><input id="cParTags" type="radio" name="parMarker" marker="!Strict"> <input id="iParLeft" type="text" class="tagLeft" style="margin-left: 25px;"><span>xxx</span><input id="iParRight" type="text"></div>
+                <div><input id="cActTags" type="checkbox" marker="!Strict" style="margin-left: 30px;"> <input id="iActLeft" type="text" class="tagLeft"><span>xxx</span><input id="iActRight" type="text"></div>
+            </div>
+
+            <p><b>{L_SETTINGS_ADDITIONAL}:</b></p>
+            <div>
+                <div><input id="cActString" type="checkbox"> {L_ACTION_COULD_BE_STRING}</div>
+                <div><input id="cActRemove" type="checkbox"> {L_ACTION_MARKERS_REMOVE}</div>
+            </div>
+        </div>
+    </div>
+    <div class="pnlRight">
+        <p><b>{L_PARAGRAPHS_FOUND}:</b> <span id="parCount">0</span> <img id="lang" src="img/16/flag_undefined.png" title="undefined language"></p>                
+        <div id="pnlPreview" class="pnlBlock">
+        ...
+        </div>
+        <button id="btnImportTXTrefresh" onclick="project.loadTXT('preview')" title="{L_RECOGNITION_REPEAT}"><img src="img/32/zoom_refresh.png"></button>
+    </div>
+</div>
+
+<!-- *********************** Export Window ************************* -->
+
+<div id="dlgExport" class="hidden" title="{L_PROJECT_EXPORT}">
+    <div class="panel-icon">
+        <img src="img/64/docx-icon.png">                                
+    </div>
+
+    <div class="pnlLeft">
+        <div class="pnlBlock encoding">
+            <p><b>{L_FILE_ENCODING}:</b> UTF-8</p>                    
+        </div>
+        <div class="pnlBlock encoding">
+            <p><b>{L_PROJECT_EXPORT_LANGUAGE}:</b>
+                <select id="sLang" onchange="project.preExport()">
+                <option value="all" selected="selected">Все</option>
+            </select></p>
+        </div>
+        <div class="pnlBlock misc">
+            <p><b>{L_SETTINGS_ADDITIONAL}</b></p>     
+            <div><input id="cLineBr" type="checkbox" class="paragraph"> {L_SETTINGS_PREWRAP}</div>
+            <div><input id="cExportActions" type="checkbox" checked> {L_PROJECT_EXPORT_ACTIONS}</div>
+        </div>
+        <!--
+        <div class="pnlBlock paragraph">
+
+            <p><b>Признак параграфа:</b></p>
+
+            <div><input id="cParTags" type="checkbox" class="paragraph"> Маркеры: <input id="iParLeft" type="text" class="tagLeft"> xxx <input id="iParRight" type="text"></div>                    
+            <div><input id="cParUnsort" type="checkbox" class="paragraph"> Неупорядочены</div>
+
+        </div>
+        <div class="pnlBlock action">
+            <p><b>Признаки действий:</b></p>                    
+            <div><input id="cActTags" type="checkbox" class="action"> Маркеры: <input id="iActLeft" type="text" class="tagLeft"> xxx <input id="iActRight" type="text"></div>
+            <div><input id="cActTagsCut" type="checkbox" class="action" checked> Убирать маркеры</div>
+            <div id="pnlActOptions">                        
+            </div>
+        </div>-->
+    </div>
+    <div class="pnlRight">
+        <p><b>{L_PARAGRAPHS_FOUND}:</b> <span id="parCount">0</span> <img id="lang" src="img/16/flag_undefined.png" title="undefined language"></p>                
+        <div id="pnlPreview" class="pnlBlock">
+        ...
+        </div><!--
+        <button id="btnExportRefresh" onclick="project.preExport()" title="Повторить распознание"><img src="img/32/zoom_refresh.png"></button>
+              -->
+    </div>
+</div>
+
+<!-- ********************** Folder Options ************************* -->
+
+<div id="dlgFolder" class="hidden" title="{L_FOLDER_SETTINGS}">
+    <b>{L_FOLDER_ICON_PICK}:</b>
+    <p class="iconlist">
+        <img id="folder_yellow"     src="img/16/folder_yellow.png">                
+        <img id="folder_black"      src="img/16/folder_black.png">
+        <img id="folder_red"        src="img/16/folder_red.png">
+        <img id="folder_green"      src="img/16/folder_green.png">
+        <img id="folder_blue"       src="img/16/folder_blue.png">
+
+        <img id="folder_torn"       src="img/16/folder_torn.png">                
+        <img id="folder_wrench"     src="img/16/folder_wrench.png">
+        <img id="folder_user"       src="img/16/folder_user.png">
+        <img id="folder_page_white" src="img/16/folder_page_white.png">
+        <img id="folder_table"      src="img/16/folder_table.png">
+        <img id="folder_picture"    src="img/16/folder_picture.png">
+        <img id="folder_image"      src="img/16/folder_image.png">
+        <img id="folder_star"       src="img/16/folder_star.png">                
+        <img id="folder_palette"    src="img/16/folder_palette.png">
+        <img id="folder_link"       src="img/16/folder_link.png">
+        <img id="folder_lightbulb"  src="img/16/folder_lightbulb.png">
+        <img id="folder_key"        src="img/16/folder_key.png">
+
+        <img id="folder_heart"      src="img/16/folder_heart.png">
+        <img id="folder_go"         src="img/16/folder_go.png">
+        <img id="folder_find"       src="img/16/folder_find.png">
+        <img id="folder_explorer"   src="img/16/folder_explorer.png">
+        <img id="folder_edit"       src="img/16/folder_edit.png">
+        <img id="folder_delete"     src="img/16/folder_delete.png">
+        <img id="folder_database"   src="img/16/folder_database.png">
+        <img id="folder_camera"     src="img/16/folder_camera.png">
+        <img id="folder_bug"        src="img/16/folder_bug.png">
+        <img id="folder_brick"      src="img/16/folder_brick.png">
+        <img id="folder_bell"       src="img/16/folder_bell.png">
+    </p>
+    <style>
+        #dlgFolder p.iconlist {
+            font-size: 0px;
+            width: 200px;
+        }
+        #dlgFolder img {
+            padding: 5px;       
+            border: 1px solid #fff;                   
+        }
+        #dlgFolder img:hover {
+            border: 1px solid #000;
+            background: #eef;
+        }
+        #dlgFolder img.selected {
+            border: 1px solid #0a6aa1;
+        }
+    </style>           
+</div>
+
+<!-- *********************** Search Dialog ************************* -->
+
+<div id="dlgSearch" class="hidden" title="{L_SEARCH}">
+    <div class="group">
+        <div id="iSearchValue"   class="field">{L_SEARCH_WHAT}: <input type="text"></div>
+        <div id="iSearchReplace" class="field">{L_SEARCH_REPLACE_WITH}: <input type="text"></div>
+    </div>
+    <div class="group">
+        <div id="cSearchTxt"><input type="checkbox" checked> {L_SEARCH_TEXTS}</div>
+        <div id="cSearchAct"><input type="checkbox"> {L_SEARCH_ACTIONS}</div>
+        <div id="cSearchScr"><input type="checkbox"> {L_SEARCH_SCRIPTS}</div>                
+    </div>
+    <div class="group">
+        <div id="cSearchReg"><input type="checkbox"> {L_SEARCH_CASE}</div>
+        <!--<div id="cSerachCur"><input type="checkbox"> В текущем параграфе</div>
+
+        <div id=""><input type="checkbox"> </div>
+        -->
+    </div>
+    <div id="search-results">
+        <div class="table">
+            <div class="result-header ui-state-default ui-tabs-active ui-state-active"><div class=""></div><div class="">§</div><div class="">{L_SEARCH_RESULT_BLOCK}</div></div>                
+        </div>
+    </div>
+</div>
+
+<!-- ********************** Book Repository ************************ -->
+
+<div id="dlgRepo" class="hidden" title="{L_CLOUD_BOOKS}">
+    <div id="list"></div>
+    <div id="repo-search"><img src="img/32/find.png" title="Поиск в Облаке"> <input id="iSearch" type="text"></div>
+</div>
+
+<!-- ******************* Component Repository ********************** -->
+
+<div id="dlgRepoComp" class="hidden" title="{L_CLOUD_COMPONENTS}">
+    <div id="list"></div>
+    <div id="info" class="hidden">
+        <b>{L_COMPONENT_DESCRIPTION}:</b> <div class="description">...</div>
+
+        <button id="btnEditComp">{L_EDIT}</button>
+        <button id="btnAddComp">{L_COMPONENT_ADD}</button>
+    </div>
+</div>
+
+<!-- ********************* Flowchart Window ************************ -->
+
+<div id="dlgFlow" class="hidden" title="{L_GRAPH}">
+    <div id="flow"></div>
+    <canvas id="my_canvas" width="1000" height="1200" />
+</div>
+
+<!-- ******************* Autolink Context Menu ********************* -->
+
+<ul id="mnuAutolink" class="hidden">
+    <li>{L_ACTION_CREATE}</li>
+</ul>                
+
+<!-- *********************** Project Options *********************** -->
+
+<div id="dlgOptions" class="hidden" title="{L_PROJECT_SETTINGS}">
+    <div>
+
+        <div id="general" class="opt-group">
+
+            <div class="header">{L_GENERAL}</div>
+
+            <div>
+                {L_PROJECT_NAME}: <input id="projName" type="text" value="{L_UNTITLED}">
+            </div>
+            <br>
+            <div>
+                <input id="cGUIHideCoding" type="checkbox"> {L_HIDE_CODING_ELEMENTS} 
+            </div>
+        </div>
+
+        <div id="translate" class="opt-group">
+
+            <div class="header">{L_TRANSLATION}</div>                              
+
+            <div class="flag-group">
+                {L_LANGUAGE_ORIGINAL}:
+                <div id="sourceLang">
+                    <img lang="eng" src="img/16/flag_eng.png" class="flag selected">
+                    <img lang="ger" src="img/16/flag_ger.png" class="flag">
+                    <img lang="fra" src="img/16/flag_fra.png" class="flag">
+                    <img lang="ita" src="img/16/flag_ita.png" class="flag">
+                    <img lang="urk" src="img/16/flag_ukr.png" class="flag">
+                    <img lang="rus" src="img/16/flag_rus.png" class="flag">
+                </div>
+            </div>
+            <div class="flag-group">
+                {L_LANGUAGE_TARGET}:
+                <div id="targetLang">
+                    <img lang="rus" src="img/16/flag_rus.png" class="flag selected">
+                    <img lang="ukr" src="img/16/flag_ukr.png" class="flag">
+                    <img lang="ita" src="img/16/flag_ita.png" class="flag">
+                    <img lang="fra" src="img/16/flag_fra.png" class="flag">
+                    <img lang="ger" src="img/16/flag_ger.png" class="flag">
+                    <img lang="eng" src="img/16/flag_eng.png" class="flag">
+                </div>
+            </div>
+
+            <div>
+                <input id="cAutoTranslate" type="checkbox"> {L_PARAGRAPH_TRANSLATE_ONOPEN}
+            </div>
+        </div>
+
+        <div id="format" class="opt-group">
+
+            <div class="header">{L_FORMATTING}</div>
+
+            <input id="cLineBreak" type="checkbox"> {L_SETTINGS_PREWRAP}
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ************************ About Window ************************* -->
+
+<div id="dlgAbout" class="hidden" title="О программе">
+    <div id="hlp-about">
+        <img src="img/header.png" alt="Header" />
+        <p style="text-align: justify;">
+            <b>Каптал</b> - это специализированный редактор, инструмент 
+            для написания книг-игр, их перевода и создания  интерактивных 
+            версий. Являясь веб-приложением, он не требует установки 
+            на компьютер пользователя. Совмещая в себе профессиональный 
+            подход с простотой использования, Каптал значительно упрощает 
+            процесс выхода в свет новых книг-игр.
+        </p>
+        <p>
+            <ul>
+                <li><b>Автор:</b> connect</li>
+                <li><b>Версия:</b> <span class="version"></span></li>
+            </ul>                
+        </p>
+        <p>
+            <img src="img/32/chrome.png" style="vertical-align: middle;"/> Работает в <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>
+        </p>
+        <p class="warning">
+            <img src="img/32/exclamation.png"> Данная версия не является готовым продуктом и служит лишь для ознакомления с ходом разработки!
+        </p>                
+        <p>                        
+            <img src="img/16/globe_place.png" alt="Link" /> <a href="http://quest-book.ru/" target="_blank">Quest-book.ru Книги-игры и интерактивные рассказы</a><br />
+            <img src="img/16/globe_place.png" alt="Link" /> <a href="http://quest-book.ru/forum/topic/3115/0" target="_blank">Страница обсуждения проекта</a>
+        </p>
+
+
+    </div>
+</div>
+
+<!-- ********************** Welcome Window ************************* -->
+
+<div id="dlgWelcome" class="hidden" title="Добро пожаловать в Каптал!">
+    <img src="img/header.png" alt="Header" />            
+    <span class="version stroke">XXX</span>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-author">Автор</a></li>
+            <li><a href="#tab-translator">Переводчик</a></li>
+            <li><a href="#tab-interactive">Интерактиватор</a></li>
+        </ul>      
+
+        <div id="tab-author">
+            <b>Ваш возможный сценарий работы:</b>
+            <ol>
+                <li>Начните с создания нового проекта</li>
+                <li>Создавайте параграф за параграфом</li>
+                <li>Экспортируйте результат своей работы</li>
+            </ol>
+            <b>Подсказки:</b>
+            <ul class="list">
+                <li><div>Импортируйте черновик, если он у вас имеется</div><a href="#" id="hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <!--li><div>Обращайте внимание на автопроверку орфографии</div><a href="#hlp-orpho">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Выделенный текст блока лекго вынести в новый параграф</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Создание связанного параграфа, клонирование параграфов и удаление с восстановлением связи</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <li><div>Внедряйте параграфы между другими для сохранения целостности</div><a href="#" id="hlp-par-inject">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Распознание переходов позволит проводить тестирование в Atril</div><a href="#" id="hlp-run">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Перемешивание параграфов значительно экономит время</div><a href="#" id="hlp-par-shuffle">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Быстрые переходы ускоряют процесс</div><a href="#" id="hlp-autolinks">Подробнее <img src="img/32/manual_icon.png"></a></li>
+            </ul>
+        </div>
+
+        <div id="tab-translator">
+            <b>Ваш возможный сценарий работы:</b>
+            <ol>
+                <li>Начните с импорта оригинала</li>
+                <li>Добавляйте текстовый блок с переводом к каждому параграфу</li>
+                <li>Экспортируйте результат своей работы</li>
+            </ol>
+            <b>Подсказки:</b>
+            <ul class="list">
+                <li><div>Импорт поддерживает форматы PDF/DOCX/TXT</div><a href="#" id="hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <!--li><div>Обращайте внимание на автопроверку орфографии</div><a href="#hlp-orpho">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Выделенный текст блока лекго вынести в новый параграф</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Создание связанного параграфа, клонирование параграфов и удаление с восстановлением связи</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <li><div>Включите режим индикации языка параграфов</div><a href="#" id="hlp-toc-lang">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Сверяйтесь с самостоятельно составленным глоссарием</div><a href="#" id="hlp-run">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Группируйте параграфы по своим каталогам</div><a href="#" id="hlp-autofolders">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>При экспорте выбирайте язык извлекаемых параграфов</div><a href="#" id="hlp-export">Подробнее <img src="img/32/manual_icon.png"></a></li>
+            </ul>
+        </div>
+
+        <div id="tab-interactive">
+            <b>Ваш возможный сценарий работы:</b>
+            <ol>
+                <li>Импортируйте оригинал</li>
+                <li>Создайте переходы между параграфами</li>
+                <li>Реализуйте скриптами внутреигровую логику</li>
+                <li>Сохраните результат своей работы</li>
+                <li>Вставьте получившийся файл в Atril проект</li>
+            </ol>
+            <b>Подсказки:</b>
+            <ul class="list">
+                <li><div>Распознание переходов во время импорта экономит время</div><a href="#" id="hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <!--li><div>Обращайте внимание на автопроверку орфографии</div><a href="#hlp-orpho">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Выделенный текст блока лекго вынести в новый параграф</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Создание связанного параграфа, клонирование параграфов и удаление с восстановлением связи</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <li><div>Индикация связности поможет найти тупики и параграфы-сироты</div><a href="#" id="hlp-toc-link">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Если вы не владеете JavaScript, на помощь придет блочное программирование Google Blockly</div><a href="#" id="hlp-blockly">Подробнее <img src="img/32/manual_icon.png"></a></li>
+
+            </ul>
+        </div>
+
+        <div style="position: relative; margin-right: 55px;">                    
+            <span class="list"><a href="#" id="hlp-intro">Открыть содержание справочного руководства</a></span>
+            <img src="img/32/manual_icon.png" style="position: absolute; right: -45px;">
+
+            <img src="img/32/info.png" style="vertical-align: middle;"> <span class="list">Сохраняйтесь почаще!</span>
+        </div>
+    </div>
+</div>
+
+<!-- ************************ Help Manual ************************** -->
+
+<div id="dlgHelp" class="hidden" title="Справочное руководство">
+
+    <div class="toc unselectable">                
+        <ul>
+            <li class="hlp-intro">Введение
+                <ul>
+                    <li class="hlp-what-captal">Что такое Каптал</li>
+                    <li class="hlp-what-jsiq">Что такое Atril</li>
+                    <li class="hlp-structure">Структура проекта</li>
+                    <li class="hlp-what-new">История версий</li>
+                    <li class="hlp-buglog">Инсектарий</li>
+                </ul>
+            </li>
+            <li class="hlp-scenarios">Сценарии
+                <ul>
+                    <li class="hlp-author">Автор</li>
+                    <li class="hlp-translator">Переводчик</li>
+                    <li class="hlp-interactive">Интерактиватор</li>
+                    <li class="hlp-scenarios-more">Еще пара слов</li>                            
+                </ul>
+            </li>
+            <li class="hlp-gui">Пользовательский интерфейс
+                <ul>
+                    <li class="hlp-mainbar">Главное меню</li>
+                    <li class="hlp-main-toolbar">Панель инструментов</li>
+                    <li class="hlp-proj-tree">Дерево проекта</li>
+                    <li class="hlp-nav-tree">Дерево навигатора</li>
+                    <li class="hlp-editor">Окно редактора</li>
+                </ul>
+            </li>
+            <li class="hlp-working">Работа с Капталом
+                <ul>
+                    <li class="hlp-proj-create">Создание проекта</li>
+                    <li class="hlp-autofolders">Как работают автокаталоги</li>
+                    <li class="hlp-autolinks">Быстрые переходы</li>
+                    <li class="hlp-import">Импорт проекта</li>
+                    <li class="hlp-par-shuffle">Перемешивание параграфов</li>                                                        
+                    <!--li class="hlp-par-inject">Внедрение параграфов</li>
+                    <li class="hlp-glossary">Глоссарий</li>
+                    <li class="hlp-blockly">Google Blockly</li>
+                    <li class="hlp-export">Экспорт проекта</li>
+                    <li class="hlp-handler">Обработчики событий</li>
+                    <li class="hlp-xml-format">Описание формата</li-->
+                </ul>
+            </li>
+            <li class="hlp-thanks">Благодарности
+                <ul>
+                    <li class="hlp-libs">Библиотеки</li>
+                    <li class="hlp-testers">Тестеры</li>
+                </ul>
+            </li>
+        </ul>    
+    </div>
+    <div class="page" id="hlp-manual">
+
+<h1 id="hlp-intro">Введение</h1>
+
+<h2 id="hlp-what-captal">Что такое Каптал</h2>
+<p>
+Каптал это специализированный редактор, инструмент для написания книг-игр, их 
+перевода и создания  интерактивных версий. Являясь веб-приложением, он не требует 
+установки на компьютер пользователя. Совмещая в себе профессиональный подход с 
+простотой использования, Каптал значительно упрощает процесс выхода в свет новых 
+книг-игр.
+</p>                 
+<h2 id="hlp-what-jsiq">Что такое Atril</h2>
+<p>Это платформа для запуска интерактивных книг-игр, разрабатываемая Jumangee. 
+    Благодаря реализации в браузерной среде на языке JavaScript, она обладает 
+    всеми современными возможностями HTML5 и богатой расширяемостью.
+    Каптал использует встроенную библиотеку Atril. Это позволяет запускать 
+    интерактивные книги-игры непосредственно из редактора, что удобно для 
+    отладки будущей игры.</p>
+
+<h2 id="hlp-structure">Структура проекта</h2>
+<p>Архитектура проекта, если так ее можно назвать, брала за основу идеологию Atril.</p>
+<h3 id="hlp-project">Проект</h3>
+<p>Единый файл проекта, который содержит в себе структурированную информацию о 
+    тексте книги-игры и о ее игровой логике. При создании интерактивной версии, 
+    может быть запущен на платформе Atril. Описание формата этого файла можно 
+    прочитать в разделе Описание формата.</p>
+<h3 id="hlp-paragraph">Параграфы</h3>
+<p>Как и в оригинальном понимании книги-игры, параграф содержит повествовательный 
+    текст, перечень переходов на другие параграфы и внутреигровую механику с 
+    условиями этих переходов.</p>
+<h3 id="hlp-block">Блоки</h3>
+<p>Упомянутые выше компоненты параграфа, реализованы в виде блоков трех типов. 
+    В самом простом случае каждый параграф книги-игры состоит из одного 
+    текстового блока. Однако, может содержать и произвольное количество блоков 
+    каждого типа. Таким образом могут существовать т.н. технические параграфы, 
+    целиком состоящие из скриптовых блоков.</p>
+<p><h4 id="hlp-block-text">Текст</h4> – Повествовательный текст произвольного объема. Обратите 
+внимание, что при необходимости данный блок может содержать HTML теги разметки, 
+а также иметь условия отображения.</p>
+<p><h4 id="hlp-block-action">Действие</h4> – Описание перехода на другой параграф. Каждому действию 
+должен соответствовать один переход. Как и текстовый блок, действие может иметь 
+условие своего отображения. Условием же служит положительный (IF TRUE), либо 
+отрицательный (IF FALSE) результат выполнения одной из функций.</p>
+<p><h4 id="hlp-block-script">Скрипт</h4> – Программа на языке JavaScript, позволяющая реализовать 
+внутреигровую логику интерактивных книг-игр, которая исполняется при отображении 
+параграфа. По умолчанию, область видимости переменных и функций, описанных в 
+блоках этого типа, ограничена пределами параграфа. Однако, скриптовой блок может 
+быть объявлен глобальным, предоставляя тем самым доступ к своему содержимому для 
+всего проекта.</p>
+<h3 id="hlp-handler">Обработчики событий</h3>
+<p>Помимо скриптовых блоков, исполняющихся при отображении их родительского 
+    параграфа, в Atril присутствует целый перечень системных событий. На каждое 
+    из которых может быть назначено несколько скриптовых блоков. Данные блоки,  
+    располагаются отдельно от параграфов и называются обработчиками. Подробнее о 
+    них можно почитать в разделе Обработчики событий.</p>
+<h3 id="hlp-folders">Каталоги</h3>
+<p>Для повышения удобства работы с потенциально большим количеством параграфов 
+    была реализована возможность группирования их по каталогам. Существуют 
+    каталоги двух типов: пользовательские и автоматические. Все, создаваемые 
+    вручную каталоги являются пользовательскими, могут быть переименованы и 
+    отображаться с различными иконками. По умолчанию параграфы распределяются 
+    между автокаталогами. Подробнее смотри раздел Как работают автокаталоги.</p>
+
+<h2 id="hlp-what-new">Что нового в этой версии</h2>
+
+<h3>0.31 beta</h3>
+<p class="prewrap">
++ Поддержка нескольких языков интерфейса
++ Сохранение некоторых настроек в cookie
+</p>
+
+<h3>0.30 beta</h3>
+<p class="prewrap">
++ Поиск c заменой по всем параграфам
++ Четырехуровневая степень завершенности параграфа
++ Проект запоминает открытые параграфы
++ Навигатор позволяет переходить по связям
++ Быстрое добавление связанного параграфа
++ Внедрение параграфа между двумя связанными
++ Копирование параграфов и блоков
++ Ярлыки и Метки параграфов
++ Открытие параграфов из окна отладки
++ Возможность отключать элементы программирования
+> Улучшен импорт из TXT, PDF, DOCX
+> Улучшен экспорт проекта в DOC
+> Переделано перемешивание параграфов
+> Переделан интерфейс редактора
+</p>
+
+<h3>0.20 alpha</h3>
+<p class="prewrap">
++ Мастер создания проекта и окно настроек
++ Максимизация центральной рабочей области
++ Автоперевод от «Яндекс.Переводчик»
++ При импорте убирать из текста маркеры действий
+> Исправлен повторный импорт
+> Исправлен перезапуск Atril
+</p>
+
+<h3>0.19 alpha</h3>
+<p class="prewrap">
+> Некоторые изменения в работе с сервером
+</p>
+
+<h3>0.18 alpha</h3>
+<p class="prewrap">
++ Открытие параграфа по клику на иконке логического поля GO
++ Облако книг-игр quest-book.ru
++ Библиотека компонентов
++ В микрословари добавлен болгарский язык
+</p>
+
+<h3>0.17 alpha</h3>
+<p class="prewrap">
++ Объединение панелей инстументов
++ Микрословари распознавания языка пополнены
++ Закладки редактора теперь можно перетаскивать
++ Признаки действий сортируются по их частоте обнаружения
++ В справочное руководство добавлен Инсектарий
+> Исправлено отображение большого количества закладок
+> Исправлена ошибка переименовывания параграфа
+> Исправлена ошибка закрытия параграфа "крестиком"
+</p>
+
+<h3>0.16 alpha</h3>        
+<p class="prewrap">
++ Главное меню программы
++ Системный лог программы
++ Закрыть другие параграфы
++ Закрыть все параграфы 
++ Комбинации клавиш: F2, Alt+O, Alt+S  
++ Справочное руководство 
++ Перемешивание параграфов 
++ Переход к параграфу Alt+G 
++ Защита от случайного закрытия Каптала
+</p>
+
+<h2 id="hlp-buglog">Инсектарий</h2>
+<img src="img/32/bug_error.png" style="float: left; margin: 10px;">
+<p>Этот раздел был создан для учета известных, но еще не исправленных на
+    данный момент ошибок. Желающим принять участие в тестировании
+    просьба заглядывать сюда с каждой новой версией.</p>
+
+
+<h1 id="hlp-scenarios">Сценарии</h1>
+
+<p>Позвольте поделиться с вами некоторыми соображениями о том, каким образом могла 
+бы быть построена работа пользователя с Капталом. На данный момент этот 
+инструмент нацелен на три категории лиц: Автор, Переводчик и Интерактиватор 
+(Аниматор). Исходя из этих ролей, существует три сценария работы с Капталом.</p>
+
+<h2 id="hlp-author">Автор</h2>
+
+<p>Начинает с пустого проекта и постепенно наполяет его содержимым, параграф за 
+параграфом. Результатом своей работы может иметь DOC документ, 
+воспользовавшись функцией экспорта. Постепенное заполнение потребует максимум удобства от 
+механизмов создания новых параграфов, так как они будут часто востребованы.</p>
+<p>В их числе: внедрение параграфа между двумя существующими, создание связанного параграфа и 
+клонирование параграфов. Стратегия написания 
+книги-игры через последовательное внедрение параграфов между началом и концом, 
+позволит иметь частично работоспособную игру на любой стадии ее написания. 
+Даже если целью автора не является создание собственной интерактивной 
+книги-игры, инструмент автоматического распознавания переходов позволит 
+проводить интерактивное тестирование.</p>
+<p>Также полезными будут еще пара функций. А 
+именно: перемешивание параграфов, которое позволит автору не отвлекаться на 
+запутывание их очередности на этапе написания и возможность группировки 
+параграфов по пользовательским папкам, которой лишены условно-бумажные аналоги.</p>    
+
+<h2 id="hlp-translator">Переводчик</h2> 
+
+<p>В начале работы имеет некий исходный материал, который и попытается 
+импортировать в проект из DOCX\PDF\TXT. После чего начнет планомерный перевод 
+параграфа за параграфом в любой удобной для себя последовательности. Приятными 
+инструментами Переводчика будут автоматический или ручной машинный перевод параграфов
+и четырехуровневая индикация готовноси. Блочная архитектура предоставит возможность 
+одновременного хранения нескольких вариантов перевода внутри одного параграфа.</p>
+<p>Ничто не помешает вам создавать технические параграфы в пользовательских каталогах.
+Куда можно помещать помимо различных памяток и собственный глоссарий соответствия терминов, 
+позволяющий не забыть принципы перевода, принятые для себя самого. Как и Автор, будет 
+заинтересован в экспорте проекта в условно-бумажный формат.</p>
+
+<h2 id="hlp-interactive">Интерактиватор</h2>
+
+<p>Создатель интерактивной версии книги-игры. Может быть вместе с тем как Автором, 
+так и Переводчиком игрового материала. В чистом же виде это тот, кто переводит 
+бумажную книгу-игру другого Автора в иной формат – интерактивный. Импорт из 
+других форматов и автоматическое распознавание переходов послужит отличной базой 
+для будущего творения.</p>
+<p>В распоряжении Интерактиватора будет вся широта возможностей языка написания 
+сценариев JavaScript, способная в наши дни реализовать что угодно. Те же, 
+кто не владеют этим искусством, смогут прибегнуть к базовым компонентам. 
+Режим индикации параграфов в дереве проекта поможет отследить тупиковые 
+и те из них, на которые не существует ни одного перехода, что позволит 
+уменьшить общее количество возможных ошибок. 
+Последним упомяну не последний по значимости инструмент тестрования во 
+встроенном экземпляре Atril. Благодаря Atril технологии, экспортируемый проект сможет быть 
+запущен на любом современном устройстве, поддерживающем серфинг интернета.</p>
+
+<h2 id="hlp-scenarios-more">Еще пара слов</h2>
+
+<p>Стоит отметить, что роли могут смешиваться между собой любым образом. 
+Приведенные выше были выделены лишь для демонстрации характерных процессов. 
+Однако многие функции могут быть востребованы в каждом сценариях. Среди подобных 
+возможностей построение графа параграфов и поиск параграфов по содержимому с 
+последующей автозаменой.</p>
+
+<h1 id="hlp-gui">Пользовательский интерфейс</h1>
+
+<h2 id="hlp-mainbar">Главное меню</h2>
+
+<p>Элементы главного меню сгруппированы по объектам их воздействия. В случае 
+наличия соответствующей комбинации клавиш, она отображается справа от элемента 
+меню. Полупрозрачные, серые пункты не могут быть применены в данный момент, либо 
+еще не являются реализованными.</p>
+
+<h3 id="hlp-project">Проект</h3>
+
+<p><h4>Новый проект</h4> – Вызовет мастер создания нового проекта. Запросит 
+подтверждение, если в редакторе уже что-то имеется. Любые несохраненные изменения будут потеряны.</p>
+<p><h4>Сохранить проект</h4> – Сохраняет текущий проект на жестком диске вашего компьютера в 
+виде единого XML файла, который при необходимости может в последствии быть 
+открыт в Atril. При этом на сервере не хранятся никакие пользовательские данные. 
+Подробнее о формате файла смотрите в разделе Описание формата.</p>
+<p><h4>Импорт</h4> – Предлагает открыть файл  одного из известых программе форматов 
+(DOCX/PDF/TXT). Подробнее об этой процедуре читайте в разделе Импорт проекта.</p>
+<p><h4>Экспорт</h4> – Сохранение в виде редактируемого текстового документа. Диалоговое окно 
+позволит произвести некоторые настройки. Подробнее об этом читайте в разделе 
+Экспорт проекта.</p>
+<p><h4>Переименовать</h4> – Смена имени проекта, которая несет чисто информативную функцию.</p>
+<p><h4>Запустить</h4> – Запуск текущего проекта во встроенном экземпляре Atril для наглядной 
+интерактивной проверки работы будущей книги-игры.</p>
+
+<h3>Параграф</h3>
+
+<p><h4>Новый параграф</h4> – Создание нового параграфа в текущем каталоге дерева проекта. В 
+случае, если выбран один из автокаталогов или не выбран ни один, созданный 
+параграф помещается в последний автокаталог. При создании параграфа в нем 
+автоматически помещается новый текстовый блок.</p>
+<p><h4>Новый каталог</h4> – Создание нового пользовательского каталога, который может быть в 
+последствии переименован и носить сменную иконку. Пользовательские каталоги в 
+дереве проекта размещаются над автоматическими.</p>
+<p><h4>Открыть</h4> – Открывает указываемый пользователем параграф. В случае его отсутствия 
+в проекте, предлагает создать.</p>
+<p><h4>Закрыть</h4> – Закрывает редактирование текущего активного параграфа.</p>
+<p><h4>Закрыть все</h4> – Закрывает все открытые для редактирования параграфы.</p>
+<p><h4>Закрыть все кроме</h4> – Закрывает все открытые для редактирования параграфы, кроме 
+текущего активного.</p>
+<p><h4>Поднять</h4> – Перемещает параграф вверх по дереву проекта, ограничиваясь при этом 
+пределами своего каталога.</p>
+<p><h4>Опустить</h4> – Перемещает параграф вниз по дереву проекта, ограничиваясь при этом 
+пределами своего каталога.</p>
+<p><h4>Копировать</h4> – Помечает параграф как копируемый для последующей процедуры вставки.</p>
+<p><h4>Вставить</h4> – Создает копию параграфа, ранее помеченного к копированию и размещает 
+его в указанном месте.</p>
+<p><h4>Удалить</h4> – Удаляет текущий параграф со всеми содержащимися в нем блоками. 
+Переименовать – позволяет поменять имя текущего параграфа.</p>
+<p>Перемешать параграфы</p>
+<p><h4>Запустить</h4> - Запускает проект во встроенном экземпляре Atril и осуществляет 
+переход на текущий параграф.</p>
+
+<h3 id="hlp-block">Блок</h3>
+
+<p><h4 id="hlp-block-text">Создать>Добавить текст</h4> – Добавляет текстовый блок к текущему параграфу.</p>
+<p><h4 id="hlp-block-action">Создать>Добавить действие</h4> – Добавляет блок дейсткия к текущему параграфу.</p>
+<p><h4 id="hlp-block-script">Создать>Добавить скрипт</h4> – Добавляет скриптовой блок к текущему параграфу.</p>
+<p><h4 id="hlp-block-rename">Переименовать</h4> – Переименовать текущий блок.</p>
+<p><h4 id="hlp-block-copy">Копировать</h4> – Помечает текущий блок для копирования.</p>
+<p><h4 id="hlp-block-paste">Вставить</h4> – Вставить в выбранное место копию ранее помеченного блока.</p>
+<p><h4>Удалить</h4> – Удаляет текущий блок с его содержимым.</p>
+<p><h4>Поднять</h4> – Перемещает блок вверх по дереву навигатора, ограничиваясь пределами 
+его типа.</p>
+<p><h4>Опустить</h4> – Перемещает блок вниз по дереву навигатора, ограничиваясь пределами 
+его типа.</p>
+<p><h4>Отступ влево</h4> – Переносит выделенный текст на расстояние одной табуляции влево.</p>
+<p><h4>Отступ вправо</h4> – Переносит выделенный текст на расстояние одной табуляции вправо.</p>
+<p><h4>Включить спецсимволы</h4> – Включает и выключает отображения специальных символов 
+(табуляция, пробел, перенос строки).</p>
+
+<h3>Каталог</h3>
+
+<p>Создать</p>
+<p>Переименовать</p>
+<p>Сменить иконку</p>
+<p>Удалить</p>
+<p>Индикация языка</p>
+<p>Индикация связности</p>
+
+<h3>Инструменты</h3>
+<p>Поиск</p>
+<p>Поиск с заменой</p>        
+<p>Дерево параграфов</p>
+<p>Статистика</p>
+
+<h3>Справка</h3>
+<p>Добро пожаловать</p>
+<p>Содержание</p>
+<p>Форум обсуждения</p>
+<p>О Программе</p>
+
+<h2 id="hlp-main-toolbar">Панель инструментов</h2>
+<p>
+    <img src="img/32/page_add.png"> Добавить новый параграф в текущую Книгу.
+</p>
+<!--p>
+    <img src="img/32/report_add.png"> Закрыть текущий проект и создать новый пустой.
+</p>
+<p>
+    <img src="img/32/folder_blue.png"> Закрыть текущий проект и открыть ранее сохраненный.
+</p>
+<p>
+    <img src="img/32/education.png"> Импортировать параграфы из DOCX, PDF, TXT.
+</p-->
+<p>
+    <img src="img/32/report_save.png"> Сохранить текущий проект в XML файл.
+</p>
+<!--p>
+    <img src="img/32/report_word.png"> Сохранить текущий проект в виде печатной книги (DOC).
+</p-->
+<p>
+    <img src="img/32/script_globe.png"> Добавить в текущий параграф текстовый блок.
+</p>
+<p>
+    <img src="img/32/script_lightning.png"> Добавить в текущий параграф блок действия.
+</p>
+<p>
+    <img src="img/32/script_gear.png"> Добавить в текущий параграф блок скрипта.
+</p>
+<p>
+    <img src="img/32/script_error.png"> Добавить в текущий обработчик новый блок.
+</p>
+<p>
+    <img src="img/32/move_up.png"> Переместить параграф выше по дереву проекта.
+</p>
+<p>
+    <img src="img/32/move_down.png"> Переместить параграф ниже по дереву проекта.
+</p>
+<p>
+    <img src="img/32/debugging.png"> Протестировать игру во встроенном Atril.
+</p>
+<p>
+    <img src="img/32/Button-White-Help-icon.png"> Эта краткая справка.
+</p>     
+
+<h2 id="hlp-proj-tree">Дерево проекта</h2>
+
+<img src="img/hlp/hlp-01.png" style="float: left; margin: 10px;">
+<p>В левой части окна располагается Дерево Проекта, которое содержит перечень 
+параграфов книги. Помимо этого в нем же помещены обработчики скриптовых событий 
+платформы Atril, которые могут пригодиться при написании интерактивной версии.</p>        
+
+<p><h4>1. Название проекта</h4> – Строка с именем будующей книги-игры.</p>
+
+<p><h4>2. Дерево параграфов</h4>
+Содержит как автокаталоги, так и созданные пользователем каталоги.</p>
+
+<p><h4>3. Пользовательский каталог</h4>
+Позволяет менять свое название и иконку.</p>
+
+<p><h4>4. Автокаталог</h4>
+Пополняется новыми параграфами до тех пор, пока не достигнет максимального 
+объема. После чего будет создан следующий автокаталог. Имя автокаталога 
+соответствует его первому и последнему параграфам.</p>
+
+<p><h4>5. Параграф - сирота</h4>
+Может содержать переход на другой параграф, но на него самого никто напрямую не 
+ссылается.</p>
+
+<p><h4>6. Параграф - тупик</h4>
+Не имеет ссылок на другие параграфы, но на него самого ссылается хотябы один 
+другой.</p>
+
+<p><h4>7. Обычный параграф</h4>
+Ссылки имеются как на него самого, так и от него на другой параграф.</p>
+
+<p><h4>8. Обработчики событий</h4>
+Скрипты обработчиков, сгруппированные по событиям.</p>    
+
+<p>Дерево проекта позволяет получить доступ к процедурам над его элементами 
+через всплывающее по правому щелчку мыши контекстное меню. Так же
+имеется возможность изменять положение параграфов, путем из перетаскивания.</p>
+
+<h3>Индикаторы параграфов</h3>
+
+<p><h4 id="hlp-toc-link">Индикатор связности</h4> - Представляет собой 
+режим работы Дерева Проекта, при котором иконки параграфов отмечают три
+состояния его связности (<img src="img/16/icon-page-red.png" class="icon"> сирота,
+<img src="img/16/icon-page-yellow.png" class="icon"> тупик,
+<img src="img/16/icon-page.png" class="icon"> обычный). Переклюить Дерево Проекта 
+в этот режим можно через главное меню <b>Каталог > Индикация связности</b></p>
+
+<p><h4 id="hlp-toc-lang">Индикатор языка</h4> -  в будущих версиях</p>
+
+<h2 id="hlp-nav-tree">Дерево навигатора</h2>
+
+<img src="img/hlp/hlp-nav.png" style="float: left; margin: 10px;">
+<p>В правой части окна Каптала располагается Навигатор, который 
+    представляет собой дерево блоков текущего параграфа или же обработчиков
+    одного из системных событий Atril.</p>
+<p><h4>1. Текущий параграф</h4></p>
+<p><h4>2. Текстовые блоки параграфа</h4></p>
+<p><h4>3. Блоки действий</h4></p>
+<p><h4>4. Скриптовые блоки параграфа</h4></p>
+<p><h4>5. Обработчики событий</h4> - Обработчики событий отображаются в
+    этом месте, когда вы редактируете системное событие.</p>
+
+<h2 id="hlp-editor">Окно редактора</h2>
+
+<h1 id="hlp-working">Работа с Капталом</h1>
+
+<h2 id="hlp-proj-create">Создание проекта</h2>
+
+<img src="img/32/report_add.png" style="float: left; margin: 10px;">
+<h4>Проект > Новый проект</h4>
+<p>Закроет текущий проект, если он открыт на данный момент и создаст 
+    новый. Любые несохраненные изменения будут потеряны<br></p>
+<p></p>
+
+<h2 id="hlp-autofolders">Как работают автокаталоги</h2>
+
+<img src="img/32/folder_stand.png" style="float: left; margin: 10px;">
+<p>В каждом проекте обязательно будет присутствовать автокаталог. Его 
+можно воспринимать как способ ускорения навигации по потенциально
+большому количеству параграфов. Стоит помнить, что это не один каталог,
+а целая группа, автоматически пополняемая каждые 20 параграфов.Если при 
+создании нового параграфа не был выбран ни один каталог, 
+параграф будет добавлен в нижний автокаталог.</p>
+<p>Имена папок автокаталога генерируются автоматически и содержат в себе
+название первого и последнего находящихся в них параграфов.</p>
+<p>При желании, вы можете перенести параграфы из автокаталога а созданный
+вами пользовательский каталог путем перетаскивания.</p>
+
+<h2 id="hlp-autolinks">Быстрые переходы</h2>
+<img src="img/hlp/hlp-autolinks.png">
+<p>Для того, чтобы осуществить быстрое открытие параграфа, который упоминается
+в текущем блоке редактора, достаточно нажать и удерживать кнопку <button>Ctrl</button>
+При этом все числа данного блока превратятся в активные элементы. Левый 
+клик по этим элементам произведет открытие одноименного параграфа, а
+правый клик вызовет контекстное меню, позволяющее создать в текущем
+параграфе новый блок действия перехода к одноименному. Высвобождение 
+кнопки <button>Ctrl</button> скроет активные элементы.</p>
+<p>При переходе на несуществующий параграф, Каптал предложет вам
+создать его автоматически, при этом будет также создано и соответствующее
+действие в исходном параграфе. Таким образом, применяя данную технику, вы
+сможете ускорить процесс создания параграфов и перемещения между ними.</p>
+
+<h2 id="hlp-import">Импорт проекта</h2>
+<img src="img/32/education.png" style="float: left; margin: 10px;">
+    <p><h4>Проект > Импортировать</h4><br><br></p>
+<img src="img/hlp/hlp-import.png" style="margin-bottom: 10px;" width="580">        
+    <p><h4>1. Кодировка файла</h4> - Для содержащих кириллицу текстов очень важно
+    правильно выбрать кодировку. Каптал умеет замечать ошибки кодировки
+    и предлагать вам сменить выбор на другой вариант.</p>
+
+    <p><h4>2. Маркеры параграфа</h4> - Признак распознавания параграфов. Два текстовых
+    поля предлагают указать, что следует перед номером параграфа, а что
+    сразу после. Символ табуляции может быть указан через <b>\t</b> или скопированной
+    из предпросмотра стрелкой.</p>
+
+    <p><h4>3. Неупорядоченны</h4> - в импортируемых файлах параграфы 
+    могут быть расположены не по порядку или вообще частично отсутствовать. 
+    Эта же функция игнорирует условие последовательности параграфов.</p>
+
+    <p><h4>4. Маркеры действия</h4> - Аналогичны маркерам параграфа, но
+    служат для распознавания действий, переходов. Отменяет выбор автопризнаков.</p>
+
+    <p><h4>5. Автопризнаки</h4> - Каптал ищет любые числа, встречающиеся
+    в теле параграфов и пытается проанализировать, какой текст располагается
+    непосредственно перед этими числами. Статистическая подсказка указыает
+    на наиболее часто встречающиеся варианты, которые могут служить более
+    надежными признаками нахождения переходов. Одновременно может быть
+    выбрано несполько автопризнаков, однако при указании маркеров, 
+    игнорируется.</p>
+
+    <p><h4>6. Найденные параграфы</h4> - Количество параграфов, которое
+    Капталу удалось распознать, основываясь на сделанном выборе пользователя.            
+    Здесь же располагается флаг, являющийся индикатором языка, на котором
+    по мнению Каптала написан импортируемый текст.</p>
+
+    <p><h4>7. Повторить распознание</h4> - После внесения изменений в 
+    настройки импорта, можно снова попытаться распознать текст, нажав на
+    эту кнопку.</p>
+
+    <p><h4>8. Предпросмотр</h4> - При услови, что были найдены параграфы,
+    тут располагается предпросмотр одного из них. Если же параграфов не
+    нашлось, в этом поле будут отображены первая сотня строк.<br><br>
+    Желтым подсвечены символы табуляции и пробела, что бы облегчить
+    пользователю определить признаки параграфа и действий.</p>
+
+    <img src="img/32/info.png" style="float: left; margin: 10px;">
+    <p>Обратите внимание, что импорт форматов DOCX и PDF в значительной
+    мере отличается от TXT. Последний имеет наиболее удачную реализацию,
+    которая в последствии распространится на остальные форматы.</p>
+
+<h2 id="hlp-par-shuffle">Перемешивание параграфов</h2>
+
+<img src="img/32/shuffle.png" style="float: left; margin: 10px;">
+<h4>Параграф > Перемешать параграфы</h4>
+<p>Процесс перемешивания необратимо изменит содержимое книги-игры. Все
+параграфы, кроме первого в списке, поменяют свое название и положение в
+дереве проекта. Параграфы, находящиеся в пользовательских каталогах, 
+переместятся в автокаталог. При этом связанность с другими параграфами не 
+будет утерана т.к. действия также будут обновлены соответствующим образом.</p>                            
+
+<h2 id="hlp-par-inject">Внедрение параграфов</h2>
+<p>В следующих обновлениях.</p>
+
+<h2 id="hlp-glossary">Глоссарий</h2>
+<p>В следующих обновлениях.</p>
+
+<h2 id="hlp-blockly">Google Blockly</h2>
+<p>В следующих обновлениях.</p>
+
+<h2 id="hlp-export">Экспорт проекта</h2>
+<p>В следующих обновлениях.</p>
+
+<h2 id="hlp-handler">Обработчики событий</h2>
+<p>В следующих обновлениях.</p>
+
+<h2 id="hlp-xml-format">Описание формата</h2>
+<p>В следующих обновлениях.</p>
+
+<h1 id="hlp-thanks">Благодарности</h1>
+
+<h2 id="hlp-libs">Использованные библиотеки</h2>
+<ul>
+  <li><a href="http://jumangee.net"               target="_blank">JsIQ</a> &copy; Jumangee</li>
+  <li><a href="http://www.jquery.com"             target="_blank">jQuery</a> &copy; jQuery Team & John Resig</li>
+  <li><a href="http://www.jqueryui.com"           target="_blank">jQuery-ui</a> &copy; jQuery UI Team </li>
+  <li><a href="http://jstree.com"                 target="_blank">jsTree</a> &copy; Ivan Bozhanov</li>
+  <li><a href="https://github.com/jsFile/jsFile"  target="_blank">jsFile</a> &copy; Denys Kniazevych</li>
+  <li><a href="https://ace.c9.io"                 target="_blank">ACE editor</a> &copy; Cloud9 IDE & Mozilla</li>
+  <li><a href="https://mozilla.github.io/pdf.js"  target="_blank">PDFJS</a> &copy; Mozilla</li>
+  <li><a href="http://translate.yandex.ru"        target="_blank">Автоперевод</a> &copy; «Яндекс.Переводчик»</li>
+</ul>
+
+<h2 id="hlp-testers">Тестеры</h2>
+<p>Выражаю благодарность следующим лицам за оказанное содействие в тестировании Каптала:</p>
+<ul>
+    <li>Nori</li>
+    <li>Vervang</li>
+    <li>Jumangee</li>    
+    <li class="special"> ЮркийСлон - <i>Особая благодарность за неоценимую помощь</i></li>
+</ul>
+
+    </div>
+
+
+</div>
