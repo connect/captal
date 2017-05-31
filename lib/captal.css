@@ -487,6 +487,12 @@ body #toolbar {
     margin-top: 17px;
     padding-bottom: 24px;
 }
+.ace_spellcheck {    
+    cursor: pointer !important;
+    position:absolute;
+    z-index: 5;
+    border-bottom: 1px dotted red;
+}
 /*
 #desk.maximized .ace_editor[captal-translated="true"] {
     padding-bottom: 10px;
