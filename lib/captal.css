@@ -491,7 +491,7 @@ body #toolbar {
     cursor: pointer !important;
     position:absolute;
     z-index: 5;
-    border-bottom: 1px dotted red;
+    border-bottom: 2px dotted red;
 }
 /*
 #desk.maximized .ace_editor[captal-translated="true"] {
