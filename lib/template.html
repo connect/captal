@@ -667,7 +667,7 @@
 
 <div id="dlgWelcome" class="hidden" title="Добро пожаловать в Каптал!">
     <img src="img/header.png" alt="Header" />            
-    <span class="version stroke">XXX</span>
+    <span class="version stroke">{VERSION}</span>
     <div id="tabs">
         <ul>
             <li><a href="#tab-author">Автор</a></li>
@@ -705,12 +705,13 @@
             <b>Подсказки:</b>
             <ul class="list">
                 <li><div>Импорт поддерживает форматы PDF/DOCX/TXT</div><a href="#" id="hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li>
-                <!--li><div>Обращайте внимание на автопроверку орфографии</div><a href="#hlp-orpho">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <li><div>Обращайте внимание на автопроверку орфографии</div><a href="#hlp-orpho">Подробнее <img src="img/32/manual_icon.png"></a></li>
                 <!--li><div>Выделенный текст блока лекго вынести в новый параграф</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
                 <!--li><div>Создание связанного параграфа, клонирование параграфов и удаление с восстановлением связи</div><a href="#hlp-import">Подробнее <img src="img/32/manual_icon.png"></a></li-->
-                <li><div>Включите режим индикации языка параграфов</div><a href="#" id="hlp-toc-lang">Подробнее <img src="img/32/manual_icon.png"></a></li>
-                <li><div>Сверяйтесь с самостоятельно составленным глоссарием</div><a href="#" id="hlp-run">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <!--li><div>Включите режим индикации языка параграфов</div><a href="#" id="hlp-toc-lang">Подробнее <img src="img/32/manual_icon.png"></a></li-->
+                <!--li><div>Сверяйтесь с самостоятельно составленным глоссарием</div><a href="#" id="hlp-run">Подробнее <img src="img/32/manual_icon.png"></a></li-->
                 <li><div>Группируйте параграфы по своим каталогам</div><a href="#" id="hlp-autofolders">Подробнее <img src="img/32/manual_icon.png"></a></li>
+                <li><div>Воспользуйтесь автоматическим машинным переводом</div><a href="#" id="hlp-autotranslate">Подробнее <img src="img/32/manual_icon.png"></a></li>
                 <li><div>При экспорте выбирайте язык извлекаемых параграфов</div><a href="#" id="hlp-export">Подробнее <img src="img/32/manual_icon.png"></a></li>
             </ul>
         </div>
@@ -740,7 +741,7 @@
             <span class="list"><a href="#" id="hlp-intro">Открыть содержание справочного руководства</a></span>
             <img src="img/32/manual_icon.png" style="position: absolute; right: -45px;">
 
-            <img src="img/32/info.png" style="vertical-align: middle;"> <span class="list">Сохраняйтесь почаще!</span>
+            <span class="list"><input id="cHideWelcome" type="checkbox"> {L_WELCOME_HIDE}</span>
         </div>
     </div>
 </div>
