@@ -418,14 +418,14 @@
         </div>
         <div class="pnlBlock encoding">
             <p><b>{L_PROJECT_EXPORT_LANGUAGE}:</b>
-                <select id="sLang" onchange="project.preExport()">
+                <select id="sLang" onchange="project.exportDOC('preview')">
                 <option value="all" selected="selected">Все</option>
             </select></p>
         </div>
         <div class="pnlBlock misc">
             <p><b>{L_SETTINGS_ADDITIONAL}</b></p>     
             <div><input id="cLineBr" type="checkbox" class="paragraph"> {L_SETTINGS_PREWRAP}</div>
-            <div><input id="cExportActions" type="checkbox" checked> {L_PROJECT_EXPORT_ACTIONS}</div>
+            <div><input id="cExportActions" type="checkbox" onclick="project.exportDOC('preview')" checked> {L_PROJECT_EXPORT_ACTIONS}</div>
         </div>
         <!--
         <div class="pnlBlock paragraph">
