@@ -1077,15 +1077,39 @@ background: linear-gradient(to bottom,  #b2e1ff 0%,#66b6fc 100%);
     font-weight: bold;
     font-size: larger;
 }
+#dlgDebug .textContainer a {
+    color: #069;
+    text-decoration: none;
+}
+#dlgDebug .textContainer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 #dlgDebug #actions a:link,
 #dlgDebug #actions a:visited {
     color: #069;
-    text-decoration: underline;
+    text-decoration: none;
 }
 #dlgDebug #actions a:hover,
 #dlgDebug #actions a:active {
     color: #000;
-    text-decoration: none;    
+}
+#dlgDebug #actions .actionContainer {
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    border: 1px solid transparent;
+    border-left: 3px solid #069;
+    border-radius: 5px;
+}
+#dlgDebug #actions .actionContainer:hover {
+    color: #000;
+    border: 1px solid #069;
+    border-left: 5px solid #069;
+    background: rgb(232,239,247);
+    cursor: pointer;
+}
+#dlgDebug #actions .actionContainer:hover a {
+    color: #000;
 }
 #dlgDebug button img {
     width: 24px;
