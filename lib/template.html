@@ -266,22 +266,22 @@
             <div class="field small logicGO" title="{L_LOGIC_GOTO_LONG}">
                 <img id="logicGOicon" src="img/32/brick_go.png" onclick="gui.logicGO(this)">
                 <div class="hint">{L_LOGIC_GOTO}</div>
-                <input id="logicGO" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_GO}">
+                <input id="logicGO" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_GO}" {IF_INTEXT_READONLY}>
             </div>
             <div class="field logicTRUE" title="{L_LOGIC_TRUE_LONG}">
                 <img src="img/32/brick.png">
                 <div class="hint">{L_LOGIC_TRUE}</div>
-                <input id="logicTRUE" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_TRUE}">
+                <input id="logicTRUE" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_TRUE}" {IF_INTEXT_READONLY}>
             </div>
             <div class="field logicFALSE" title="{L_LOGIC_FALSE_LONG}">
                 <img src="img/32/brick_delete.png">
                 <div class="hint">{L_LOGIC_FALSE}</div>
-                <input id="logicFALSE" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_FALSE}">
+                <input id="logicFALSE" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_FALSE}" {IF_INTEXT_READONLY}>
             </div>
             <div class="field logicDO" title="{L_LOGIC_DO_LONG}">
                 <img src="img/32/brick_error.png">
                 <div class="hint">{L_LOGIC_DO}</div>
-                <input id="logicDO" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_DO}">
+                <input id="logicDO" type="text" onblur="gui.logicFieldUpdate(this)" value="{LOGIC_DO}" {IF_INTEXT_READONLY}>
             </div>
             <div class="field logicGLOBAL" title="{L_LOGIC_GLOBAL_LONG}">
                 <img src="img/32/globe_place.png">
